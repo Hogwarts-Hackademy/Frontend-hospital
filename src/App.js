@@ -1,6 +1,6 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Login from './pages/loginPage.js';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/loginPage.jsx";
 
 function App() {
   return (
