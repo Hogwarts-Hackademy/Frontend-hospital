@@ -1,5 +1,5 @@
-import React from 'react';
-import './Sidebar.css';
+import { Link } from 'react-router-dom';
+import './Sidebar.css'; // Ensure this CSS file styles your sidebar
 
 const Sidebar = () => {
   return (
@@ -8,13 +8,13 @@ const Sidebar = () => {
         <h2>Admin</h2>
       </div>
       <ul className="sidebar-menu">
-        <li>Dashboard</li>
-        <li>Patient records</li>
-        <li>Add schedules</li>
-        <li>Add staff</li>
-        <li>Department records</li>
-        <li>Manage Inventory</li>
-        <li>Hospital Profile</li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/patient-records">Patient records</Link></li>
+        <li><Link to="/add-schedules">Add schedules</Link></li>
+        <li><Link to="/add-staff">Add staff</Link></li>
+        <li><Link to="/department-records">Department records</Link></li>
+        <li><Link to="/manage-inventory">Manage Inventory</Link></li>
+        <li><Link to="/hospital-profile">Hospital Profile</Link></li>
       </ul>
       <div className="sidebar-footer">
         <p>Have any problems with managing your dashboard? Try to contact Customer Support</p>

@@ -1,35 +1,47 @@
+/* Sidebar.css */
 .sidebar {
-	width: 20%;
-	background-color: #1e90ff;
-	color: white;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  margin: 25px;
+  width: 20%;
+  background-color: #0381ff;
+  border-radius: 25px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar-header h2 {
-	font-size: 24px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .sidebar-menu {
-	list-style-type: none;
-	padding: 0;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
 .sidebar-menu li {
-	margin: 20px 0;
+  margin: 20px 0;
 }
 
 .sidebar-footer {
-	margin-top: 20px;
+  margin-top: 20px;
+  margin: 25px;
+  padding-bottom: 25px;
+}
+
+.sidebar-footer p{
+  margin: 25px;
 }
 
 .sidebar-footer button {
-	width: 100%;
-	padding: 10px;
-	background-color: #4caf50;
-	border: none;
-	color: white;
-	cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
 }
