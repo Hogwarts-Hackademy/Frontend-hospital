@@ -1,17 +1,18 @@
-import React from 'react';
-import Sidebar from '../src/pages/Sidebar';
-import Admin_Dashboard from '../src/pages/admin/Admin_Dashboard';
-import './App.css';
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import Login from "./pages/loginPage.jsx";
+import Dashboard from "./pages/admin/adminDashboard.jsx";
 
 function App() {
-  return (
-    <div className="app">
-      <Sidebar/>
-      <div className="main">
-        <Admin_Dashboard/>
-      </div>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Routes>
+                <Route path="/" element={<Navigate to="/login" />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/admin" element={<Dashboard />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;

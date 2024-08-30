@@ -1,6 +1,5 @@
-// Sidebar.js
 import React from 'react';
-import './Sidebar.css'; // Make sure to create this CSS file
+import './Sidebar.css';
 
 const Sidebar = () => {
   return (
