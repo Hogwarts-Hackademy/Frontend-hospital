@@ -86,7 +86,7 @@ const LoginPage = () => {
                 </form>
             </div>
             <div className="login-image">
-                <img src={loginPageIllustration} alt="Login Illustration" />
+                <img src={loginPageIllustration} alt="A Hospital Staff" />
             </div>
 
             {/* Snackbar for error messages */}
