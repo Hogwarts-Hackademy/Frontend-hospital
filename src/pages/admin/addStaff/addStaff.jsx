@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from '../../../Components/Sidebar';
 import {
 	Container,
@@ -10,9 +10,39 @@ import {
 	Radio,
 	Box,
 } from "@mui/material";
-import formFields from './formFields.json'; // Import JSON file
+import formFields from './formFields.json';
+import axios from 'axios';
+import staffAPI from "../../../config/staffAPI";
 
 const AddStaff = () => {
+	const [formData, setFormData] = useState({});
+
+	const handleChange = (e) => {
+		const { id, value } = e.target;
+		setFormData({
+			...formData,
+			[id]: value,
+		});
+	};
+
+	const handleRadioChange = (e) => {
+		const { name, value } = e.target;
+		setFormData({
+			...formData,
+			[name]: value,
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const response = await axios.post(`${staffAPI.ADD_STAFF}`, formData);
+			console.log('Staff registered:', response.data);
+		} catch (error) {
+			console.error('Error registering staff:', error.response ? error.response.data : error.message);
+		}
+	};
+
 	return (
 		<div className="dashboard">
 			<Sidebar />
@@ -31,7 +61,7 @@ const AddStaff = () => {
 						borderRadius: "8px",
 						p: 3,
 					}}>
-					<form noValidate>
+					<form noValidate onSubmit={handleSubmit}>
 						<Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
 							{formFields.formFields.map((field) => (
 								<Box
@@ -45,7 +75,8 @@ const AddStaff = () => {
 										<RadioGroup
 											row
 											aria-label={field.label.toLowerCase()}
-											name={field.id}>
+											name={field.id}
+											onChange={handleRadioChange}>
 											{field.options.map((option) => (
 												<FormControlLabel
 													key={option}
@@ -63,6 +94,7 @@ const AddStaff = () => {
 											label={field.label}
 											variant="outlined"
 											type={field.type}
+											onChange={handleChange}
 										/>
 									)}
 								</Box>

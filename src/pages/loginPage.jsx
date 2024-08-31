@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
-import login_API from '../config/login_API';
+import loginAPI from '../config/loginAPI';
 import './loginPage.css';
-import loginPageIllustration from "../assets/images/loginPageIllustration.svg"; // Updated import
+import loginPageIllustration from "../assets/images/loginPageIllustration.svg";
 
 const LoginPage = () => {
     const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -16,7 +16,7 @@ const LoginPage = () => {
         const password = event.target.password.value;
 
         try {
-            const response = await fetch(`${login_API.API_BASE_URL}${login_API.LOGIN_URL}`, {
+            const response = await fetch(`${loginAPI.LOGIN_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
