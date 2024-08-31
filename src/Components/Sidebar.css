@@ -32,16 +32,20 @@
   padding-bottom: 25px;
 }
 
-.sidebar-footer p{
+.sidebar-footer p {
   margin: 25px;
 }
 
 .sidebar-footer button {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
   cursor: pointer;
   border-radius: 25px;
+}
+
+.sidebar-link-text {
+  color: white;
 }
