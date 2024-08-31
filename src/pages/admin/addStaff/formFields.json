@@ -1,0 +1,70 @@
+{
+  "formFields": [
+    {
+      "id": "fullName",
+      "label": "Full Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "dob",
+      "label": "Date of Birth",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "contact",
+      "label": "Contact No.",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "gender",
+      "label": "Gender",
+      "type": "radio",
+      "options": ["male", "female", "other"]
+    },
+    {
+      "id": "nationalId",
+      "label": "National ID",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "address",
+      "label": "House address",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "specialization",
+      "label": "Specialization",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "department",
+      "label": "Department",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "staffType",
+      "label": "Staff Type",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "experience",
+      "label": "Years of Experience",
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "licenseNumber",
+      "label": "License Number",
+      "type": "text",
+      "required": true
+    }
+  ]
+}
