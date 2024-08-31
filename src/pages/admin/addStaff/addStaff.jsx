@@ -9,6 +9,8 @@ import {
 	FormControlLabel,
 	Radio,
 	Box,
+	Snackbar,
+	Alert
 } from "@mui/material";
 import formFields from './formFields.json';
 import axios from 'axios';
@@ -16,6 +18,9 @@ import staffAPI from "../../../config/staffAPI";
 
 const AddStaff = () => {
 	const [formData, setFormData] = useState({});
+	const [snackbarOpen, setSnackbarOpen] = useState(false);
+	const [snackbarMessage, setSnackbarMessage] = useState('');
+	const [snackbarSeverity, setSnackbarSeverity] = useState('success');
 
 	const handleChange = (e) => {
 		const { id, value } = e.target;
@@ -37,10 +42,20 @@ const AddStaff = () => {
 		e.preventDefault();
 		try {
 			const response = await axios.post(`${staffAPI.ADD_STAFF}`, formData);
+			setSnackbarMessage('Staff registered successfully!');
+			setSnackbarSeverity('success');
+			setSnackbarOpen(true);
 			console.log('Staff registered:', response.data);
 		} catch (error) {
+			setSnackbarMessage('Error registering staff.');
+			setSnackbarSeverity('error');
+			setSnackbarOpen(true);
 			console.error('Error registering staff:', error.response ? error.response.data : error.message);
 		}
+	};
+
+	const handleCloseSnackbar = () => {
+		setSnackbarOpen(false);
 	};
 
 	return (
@@ -112,6 +127,17 @@ const AddStaff = () => {
 					</form>
 				</Box>
 			</Container>
+
+			<Snackbar
+				open={snackbarOpen}
+				autoHideDuration={6000}
+				onClose={handleCloseSnackbar}
+				anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+			>
+				<Alert onClose={handleCloseSnackbar} severity={snackbarSeverity} sx={{ width: '100%' }}>
+					{snackbarMessage}
+				</Alert>
+			</Snackbar>
 		</div>
 	);
 };
