@@ -1,0 +1,67 @@
+.dashboard {
+    display: flex;
+    background-color: #F0F3FB;
+}
+
+.container-main {
+    max-width: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.typography-header {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #fafafa;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.form-box > div {
+    flex-basis: calc(50% - 1rem);
+    min-width: 200px;
+}
+
+.form-box > div.radio-group {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-box > div.full-width {
+    flex-basis: 100%;
+}
+
+.submit-button {
+    background-color: #1976d2;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #155fa0;
+}
+
+.snackbar {
+    top: 10% !important;
+}
+
+.alert {
+    width: 100%;
+}
