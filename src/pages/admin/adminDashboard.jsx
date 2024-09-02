@@ -1,5 +1,4 @@
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'; // Import Notification icon
-import { Card } from '@mui/material';
 import Sidebar from '../../Components/Sidebar';
 import dashboardImage from '../../assets/images/dashboard.svg';
 import './adminDashboard.css';
@@ -32,7 +31,7 @@ const Dashboard = () => {
                         <div className="card patient-admission">
                             <h3>Patient Admission</h3>
                             <p className="admission-count">1,287</p>
-                       </div>
+                        </div>
                         <div className="card bed-availability">
                             <h3>Bed Availability</h3>
                             <p>Beds: 24</p>

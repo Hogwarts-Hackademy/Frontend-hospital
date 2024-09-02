@@ -1,11 +1,11 @@
 import React from 'react';
-import Sidebar from '../../../Components/Sidebar';
-import './registerPatient.css'; 
+import Sidebar from '../../Components/Sidebar';
+import './registerPatient.css';
 
 const RegisterPatient = () => {
     return (
         <div className="register-container">
-            <Sidebar/>
+            <Sidebar />
             <div className="form-container">
                 <h2>Register A Patient</h2>
                 <form>

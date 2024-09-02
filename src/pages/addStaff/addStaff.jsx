@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from '../../../Components/Sidebar';
+import Sidebar from '../../Components/Sidebar';
 import {
 	Container,
 	TextField,
@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import formFields from './formFields.json';
 import axios from 'axios';
-import staffAPI from "../../../config/staffAPI";
+import staffAPI from "../../config/staffAPI";
 
 const AddStaff = () => {
 	const [formData, setFormData] = useState({});
