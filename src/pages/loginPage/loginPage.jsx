@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
-import loginAPI from '../config/loginAPI';
+import loginAPI from '../../config/loginAPI';
 import './loginPage.css';
-import loginPageIllustration from "../assets/images/loginPageIllustration.svg";
+import loginPageIllustration from "../../assets/images/loginPageIllustration.svg";
 
 const LoginPage = () => {
     const [snackbarOpen, setSnackbarOpen] = useState(false);

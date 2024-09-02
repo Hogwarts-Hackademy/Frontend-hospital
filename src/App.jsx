@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import './App.css';
-import Login from "./pages/loginPage.jsx";
-import Dashboard from "./pages/admin/adminDashboard.jsx";
+import Login from "./pages/loginPage/loginPage.jsx";
+import Dashboard from "./pages/adminDashboard/adminDashboard.jsx";
 import AddStaff from "./pages/addStaff/addStaff.jsx";
 import PrescriptionPage from "./pages/prescriptionPage/prescriptionPage.jsx";
 import RegisterPatient from "./pages/registerPatient/registerPatient.jsx";
