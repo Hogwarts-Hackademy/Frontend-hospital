@@ -1,81 +1,74 @@
 .register-container {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #2f74c0;
-  padding: 20px;
-  color: white;
+	display: flex;
+	height: 100vh;
 }
 
 .sidebar-content h2 {
-  font-size: 24px;
+	font-size: 24px;
 }
 
 .sidebar-section h3 {
-  font-size: 18px;
-  margin-top: 20px;
+	font-size: 18px;
+	margin-top: 20px;
 }
 
 .sidebar-section ul {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 .sidebar-section ul li {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 .contact-support {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .contact-support button {
-  background-color: #2f74c0;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
+	background-color: #2f74c0;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
 }
 
 .form-container {
-  flex: 1;
-  padding: 20px;
+	flex: 1;
+	padding: 20px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
+	display: block;
+	margin-bottom: 5px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="date"],
 .form-group input[type="file"],
 .form-group textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 .form-group input[type="radio"] {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 .form-section {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 .register-btn {
-  background-color: #2f74c0;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+	background-color: #2f74c0;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
 }
