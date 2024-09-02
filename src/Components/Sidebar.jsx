@@ -8,7 +8,7 @@ const Sidebar = () => {
         <h2>Admin</h2>
       </div>
       <ul className="sidebar-menu">
-        <li><Link className='sidebar-link-text' to="/dashboard">Dashboard</Link></li>
+        <li><Link className='sidebar-link-text' to="/admin">Dashboard</Link></li>
         <li><Link className='sidebar-link-text' to="/patient-records">Patient records</Link></li>
         <li><Link className='sidebar-link-text' to="/add-schedules">Add schedules</Link></li>
         <li><Link className='sidebar-link-text' to="/add-staff">Add staff</Link></li>
