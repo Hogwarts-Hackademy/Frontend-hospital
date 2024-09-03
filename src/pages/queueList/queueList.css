@@ -1,0 +1,62 @@
+.queue-list-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f4ff;
+  overflow: hidden;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.department-select {
+  padding: 10px;
+  background-color: #2d53da;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+.patient-queue {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 30px;
+  text-align: left;
+}
+
+th {
+  background-color: #e0e7ff;
+}
+
+td {
+  background-color: #dbe5ff;
+  font-weight: bold;
+}
+h2{
+  margin: 25px;
+}
