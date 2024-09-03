@@ -1,0 +1,98 @@
+/* HospitalProfile.css */
+.hospital-profile-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+.contact-support {
+  margin-top: 20px;
+}
+
+.contact-support p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-support button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-content {
+  width: 80%;
+  padding: 20px;
+}
+
+.hospital-profile h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hospital-profile .details {
+  margin-bottom: 20px;
+}
+
+.hospital-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-card h2 {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hospital-profile-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .section-card {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital-profile h1 {
+    font-size: 24px;
+  }
+
+  .sidebar h2, .section-card h2 {
+    font-size: 20px;
+  }
+
+  .section-card p {
+    font-size: 14px;
+  }
+
+  .contact-support p, .contact-support button {
+    font-size: 12px;
+  }
+}
