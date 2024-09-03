@@ -158,7 +158,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
   
   .large-component-grid {
@@ -212,4 +212,26 @@
     font-size: 24px;
     color: #000;
   }
+  .dashboard-row {
+    display: grid;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+.dashgrid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.graph-image-container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.image-text-container {
+  position: relative;
   
+}

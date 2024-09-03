@@ -1,9 +1,9 @@
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import Sidebar from "../../Components/Sidebar";
 import dashboardImage2 from "../../assets/images/dashboard2.png";
+import GraphCard from '../../Components/graphcard';
 import "./adminDashboard.css";
 
-// New component for the image with text overlay
 const ImageWithTextOverlay = ({
   imageSrc,
   text,
@@ -35,11 +35,10 @@ const ImageWithTextOverlay = ({
   );
 };
 
-// New component for the large container with grid layout
 const LargeComponentWithGrid = ({ boxContents, title }) => {
   return (
     <div className="large-component-grid">
-      <p className="large-box-title">{title}</p> {/* Title at the top left */}
+      <p className="large-box-title">{title}</p>
       {boxContents.map((content, index) => (
         <div key={index} className="grid-box">
           <p className="box-text">{content.text}</p>
@@ -91,24 +90,26 @@ const Dashboard = () => {
               <NotificationsNoneIcon className="notification-icon" />
             </div>
           </header>
-
-          {/* Image with text and blur boxes overlay */}
-          <ImageWithTextOverlay
-            imageSrc={dashboardImage2}
-            text="Patients"
-            number="169"
-            blurBox1Text="Ambulance 24"
-            blurBox2Text="Emergency Calls 24"
-          />
-
+          <div className="dashgrid">
+            {/* Container to hold ImageWithTextOverlay and GraphCard side by side */}
+            <div className="graph-image-container">
+              <ImageWithTextOverlay
+                imageSrc={dashboardImage2}
+                text="Patients"
+                number="169"
+                blurBox1Text="Ambulance 24"
+                blurBox2Text="Emergency Calls 24"
+              />
+              <GraphCard />
+            </div>
+          </div>
           {/* Grid of large components */}
           <div className="large-components-grid">
             <LargeComponentWithGrid boxContents={boxContents1} title="Bed Availability" />
-            
             <LargeComponentWithGrid boxContents={boxContents3} title="Inventory" />
           </div>
           <div className="large-components-grid2">
-          <LargeComponentWithGrid boxContents={boxContents2} title="Staff Availibility" />
+            <LargeComponentWithGrid boxContents={boxContents2} title="Staff Availibility" />
           </div>
         </main>
       </div>
