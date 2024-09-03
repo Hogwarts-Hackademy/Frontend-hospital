@@ -1,6 +1,5 @@
 import React from 'react';
 import './nurseNotes.css';
-
 const NurseNotes = () => {
     return (
         <div className="nurse-notes-container">
