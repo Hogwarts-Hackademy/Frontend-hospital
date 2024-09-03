@@ -67,7 +67,7 @@
 .sidebar-link-text {
 	color: white;
 	text-decoration: none;
-	transition: 1000ms;
+	transition: 200ms;
 }
 
 .sidebar-link-text:hover {
