@@ -40,11 +40,15 @@
   margin-bottom: 20px;
 }
 
-.filter-button, .search-bar {
+.filter-button {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+.search-bar{
+  border-radius: 5px;
+  padding: 10px;
+ }
 
 .records-table {
   overflow-x: auto;
