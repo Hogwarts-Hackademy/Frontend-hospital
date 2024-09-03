@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Sidebar.css'; // Ensure this CSS file styles your sidebar
+import image from '../assets/images/image.png'; // Import your image
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
+        <img src={image} alt="Admin Icon" className="sidebar-icon" />
         <h2>Admin</h2>
       </div>
       <ul className="sidebar-menu">

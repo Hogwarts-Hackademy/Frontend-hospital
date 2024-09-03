@@ -1,7 +1,8 @@
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import Sidebar from "../../Components/Sidebar";
 import dashboardImage2 from "../../assets/images/dashboard2.png";
-import "./adminDashboard.css";
+import dashboardSvg from "../../assets/images/dashboard.svg"; // Import your SVG
+import "./component.css";
 
 // New component for the image with text overlay
 const ImageWithTextOverlay = ({
@@ -51,34 +52,14 @@ const Dashboard = () => {
             blurBox2Text="Emergency Calls 24"
           />
 
-          <section className="dashboard-cards">
-            <div className="card bed-availability">
-              <h3>Bed Availability</h3>
-              <p>Beds: 24</p>
-              <p>ICU: 24</p>
-              <p>Emergency rooms: 24</p>
-              <p>OT: 24</p>
-              <p>Ventilators: 24</p>
+          {/* New Card Component with SVG */}
+          <div className="card-container">
+            <div className="card-component">
+              <h3>Card Title</h3>
+              <p>Card content goes here.</p>
             </div>
-            <div className="card staff-availability">
-              <h3>Staff Availability</h3>
-              <p>Doctors: 24</p>
-              <p>Nurses: 24</p>
-              <p>Lab technicians: 24</p>
-              <p>Receptionists: 24</p>
-              <p>Janitors: 24</p>
-            </div>
-            <div className="card inventory">
-              <h3>Inventory</h3>
-              <p>Out of stock medicines: 24</p>
-              <p>Ordered medicines: 24</p>
-              <p>Expired meds: 24</p>
-            </div>
-            <div className="card other">
-              <h3>Others</h3>
-              <p>Departments: 24</p>
-            </div>
-          </section>
+            <img src={dashboardSvg} alt="Dashboard SVG" className="dashboard-svg" />
+          </div>
         </main>
       </div>
     </div>

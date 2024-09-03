@@ -231,3 +231,75 @@
         left: 5%;
     }
 }
+.card-component {
+    width: 680px;
+    height: 250px;
+    background: linear-gradient(to right, #EBEBEB 0%, #8069FF 100%);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Space above the card */
+    color: #ffffff; /* Optional: Adjust text color to ensure readability on the gradient */
+}
+
+.card-component h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #ffffff; /* Match text color with card background for readability */
+}
+
+.card-component p {
+    font-size: 1em;
+    color: #ffffff; /* Match text color with card background for readability */
+}
+.card-container {
+    position: relative; /* Ensure child elements are positioned relative to this container */
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the container */
+    margin-top: 20px; /* Space above the card */
+}
+
+.card-component {
+    width: 680px;
+    height: 250px;
+    background: linear-gradient(to right, #EBEBEB 0%, #8069FF 100%);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Adjust text color */
+    position: relative; /* Positioning context for the SVG */
+    z-index: 1; /* Ensure card is above SVG */
+}
+
+.card-component h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #ffffff; /* Adjust text color */
+}
+
+.card-component p {
+    font-size: 1em;
+    color: #ffffff; /* Adjust text color */
+}
+
+.dashboard-svg {
+    width: 202.18px;
+    height: 350px;
+    position: absolute;
+    right: 50%; /* Position the SVG so it overlaps the card */
+    top: -25%; /* Adjust to make the SVG appear to come out of the card */
+    z-index: 2; /* Ensure SVG is below the card */
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .card-component {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .dashboard-svg {
+        width: 80%; /* Adjust SVG width */
+        height: auto; /* Maintain aspect ratio */
+        transform: translateY(-15%); /* Adjust vertical position */
+    }
+}

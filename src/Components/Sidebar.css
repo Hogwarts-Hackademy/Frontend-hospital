@@ -1,8 +1,8 @@
 .sidebar {
-	margin: 25px;
-	width: 20%;
+	margin: 0px;
+	width: 15%;
 	background-color: #2d53da;
-	border-radius: 25px;
+	border-radius: 20px;
 	color: white;
 	padding: 20px;
 	display: flex;
@@ -10,42 +10,58 @@
 	justify-content: space-between;
 }
 
+.sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px;
+	gap: 10px; /* Space between the image and text */
+}
+
+.sidebar-header img {
+	width: 60px; /* Adjust size as needed */
+	height: auto; /* Maintain aspect ratio */
+}
+
 .sidebar-header h2 {
 	font-size: 24px;
-	text-align: center;
 }
 
 .sidebar-menu {
-	list-style-type: none;
+	list-style: none; /* Remove default bullets */
 	padding: 0;
-	text-align: center;
+	text-align: left; 
 }
 
 .sidebar-menu li {
-	margin: 20px 0;
+	margin: 20px 0; /* Reduce margin for better spacing */
+	padding-left: 25px; /* Indent links to mimic bullets */
+	position: relative;
 }
 
 .sidebar-footer {
 	background: rgba(217, 217, 217, 0.2);
 	text-align: center;
 	margin-top: 20px;
-	margin: 25px;
+	margin: 15px;
 	padding-bottom: 25px;
 	border-radius: 10px;
 }
 
 .sidebar-footer p {
 	margin: 25px;
+	font-weight: normal; /* Remove bold */
+	font-size: 14px; /* Adjust to a smaller size */
 }
 
 .sidebar-footer button {
-	width: 100%;
+	width: 70%;
 	padding: 10px;
 	background-color: #1dcef5;
 	border: none;
 	color: white;
 	cursor: pointer;
-	border-radius: 25px;
+	border-radius: 7px;
 }
 
 .sidebar-link-text {
@@ -61,4 +77,11 @@
 	background-color: white;
 	border-radius: 15px;
 	padding: 12px;
+}
+
+.sidebar-menu li::before {
+	content: '•'; /* Bullet character */
+	color: white; /* Bullet color */
+	position: absolute; /* Position it relative to the list item */
+	left: 0; /* Align it to the left edge of the list item */
 }
