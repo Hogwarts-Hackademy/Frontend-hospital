@@ -8,8 +8,13 @@ import PrescriptionPage from "./pages/prescriptionPage/prescriptionPage.jsx";
 import RegisterPatient from "./pages/registerPatient/registerPatient.jsx";
 import QueueList from "./pages/queueList/queueList.jsx";
 import PatientRecords from "./pages/patientRecords/patientRecords.jsx";
-import NurseNotes from "./pages/NurseNotes/nurseNotes.jsx";
+import NurseNotes from "./pages/nurseNotes/nurseNotes.jsx";
 import Appointments from "./pages/receptionistAppointments/appointments.jsx";
+import DoctosStatus from "./pages/doctosStatus/doctosStatus.jsx";
+import BillingPage from "./pages/billingPage/billingPage.jsx";
+import AddHospitalProfile from "./pages/addHospitalProfile/addHospitalProfile.jsx";
+import HospitalProfile from "./pages/hospitalProfile/hospitalProfile.jsx";
+import DepartmentInfo from "./pages/departmentInfo/departmentInfo.jsx";
 
 function App() {
 	return (
@@ -25,6 +30,11 @@ function App() {
 				<Route path="/patient-records" element={<PatientRecords />} />
 				<Route path="/nurse-notes" element={<NurseNotes />} />
 				<Route path="/receptionist-appointments" element={<Appointments />} />
+				<Route path="/doctos-status" element={<DoctosStatus />} />
+				<Route path="/billing" element={<BillingPage />} />
+				<Route path="/add-hospital" element={<AddHospitalProfile />} />
+				<Route path="/hospital-profile" element={<HospitalProfile/>} />
+				<Route path="/department-info" element={<DepartmentInfo/>}/>
 			</Routes>
 		</div>
 	);
