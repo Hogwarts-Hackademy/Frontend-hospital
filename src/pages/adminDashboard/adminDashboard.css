@@ -1,158 +1,65 @@
+/* General styles */
 .dashboard {
-	display: flex;
-	height: 100vh;
-	overflow: hidden;
-	background-color: #f0f3fb; /* Prevent overflow on the dashboard */
-}
-
-.dashboard-container {
-	display: flex;
-	
-	flex: 1;
-	padding: 20px;
-	height: 100vh;
-	background-color: #f0f3fb;
-	overflow-y: auto; /* Enable vertical scrolling within the container */
-}
-
-.main-content {
-	flex: 1; /* Allow the main content area to grow and shrink */
-	width: 100%; /* Make the main content take up the full available width */
-	padding: 20px;
-	background-color: #f0f3fb;
-	overflow-y: auto; /* Enable vertical scrolling within the main content */
-}
-
-.dashboard-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.dashboard-header h1 {
-	font-size: 24px;
-}
-
-.header-right {
-	display: flex;
-	align-items: center;
-}
-
-.dashboard-header {
-	padding: 10px;
-	font-size: 16px;
-	margin-right: 10px; /* Space between search bar and notification icon */
-}
-
-.search-bar input {
-	border-radius: 10px;
-	border-color: #ffffff;
-	
-	padding: 10px;
-	font-size: 16px;
-	margin-right: 10px; /* Space between search bar and notification icon */
-}
-
-.search-bar input:hover {
-	border-color: #000000;
-	border-style: solid;
-}
-
-.notification-icon {
-	cursor: pointer;
-}
-
-.dashboard-cards {
-	border-radius: 25px;
-	padding: 25px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	margin-top: 50px;
-	background-color: white;
-}
-
-.card {
-	background-color: white;
-	padding: 20px;
-	border-radius: 8px;
-	flex: 1;
-	min-width: 40%;
-}
-
-.card h3 {
-	margin-bottom: 20px;
-}
-
-.card p {
-	margin: 10px 0;
-}
-
-.call-details {
-	display: flex;
-	justify-content: space-around;
-}
-
-.emergency-calls,
-.patient-admission,
-.bed-availability,
-.staff-availability,
-.inventory,
-.other {
-	background-color: #f0f3fb;
-	margin: 5px;
-}
-
-.emergency-calls p:hover,
-.patient-admission p:hover,
-.bed-availability p:hover,
-.staff-availability p:hover,
-.inventory p:hover,
-.other p:hover {
-	border-color: #000000;
-	background-color: #ffffff;
-	border-radius: 50px;
-	padding: 15px;
-}
-.emergency-calls p,
-.patient-admission p,
-.bed-availability p,
-.staff-availability p,
-.inventory p,
-.other p {
-	justify-content: center;
-	margin-top: 25px;
-	display: flex;
-	color: #000000;
-	background-color: #d7e3fc;
-	border-radius: 15px;
-	padding: 12px;
-	size: 50px;
-}
-.welcome-text {
-    display: block; /* Forces "Welcome Back," to be on its own line */
-}
-.user-name {
-    color: #002E55; /* Change to your desired color */
-    font-weight: bold;
-	font-style: italic;
-    display: block; 
-}
-
-.image-text-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f0f3fb;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    height: 100vh;
+    background-color: #f0f3fb;
+    overflow-y: auto;
+  }
+  
+  .main-content {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f3fb;
+    overflow-y: auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    border-radius: 10px;
+    border-color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .notification-icon {
+    cursor: pointer;
+  }
+  
+  /* Styles for image with text and blur boxes */
+  .image-text-container {
     position: relative;
     display: inline-block;
-    width: 100%; /* Make the image container responsive */
-    max-width: 800px; /* Optional: Limit the max width of the image */
-    margin-top: 20px;
-}
-
-.dashboard-image {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-}
-
-.overlay-text {
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .overlay-text {
     position: absolute;
     top: 30%;
     left: 5%;
@@ -160,13 +67,27 @@
     padding: 5px 20px;
     border-radius: 5px;
     font-size: 1.5em;
-    max-width: 90%; /* Ensure text stays within the image bounds */
+    max-width: 90%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Truncate text if it exceeds the container */
-}
-
-.blur-box {
+    text-overflow: ellipsis;
+  }
+  
+  .overlay-text2 {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    color: rgb(0, 0, 0);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 2.5em;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .blur-box {
     position: absolute;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -175,59 +96,119 @@
     width: 20%;
     color: #2c2c2c;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.blur-box1 {
+  }
+  
+  .blur-box1 {
     bottom: 10%;
     left: 5%;
-}
-
-.blur-box2 {
+  }
+  
+  .blur-box2 {
     bottom: 10%;
-    right: 30%;
-}
-
-@media (max-width: 768px) {
-	.overlay-text {
-        font-size: 1.2em;
-        top: 40%; /* Adjust positioning for smaller screens */
-    }
-
-    .blur-box {
-        width: 45%;
-        padding: 15px;
-    }
-
-    .blur-box1 {
-        bottom: 8%;
-        left: 4%;
-    }
-
-    .blur-box2 {
-        bottom: 8%;
-        right: 4%;
-    }
-}
-
-@media (max-width: 480px) {
+    right: 35%;
+  }
+  
+  @media (max-width: 768px) {
     .overlay-text {
-        font-size: 1em;
-        top: 6%;
-        left: 3%;
+      font-size: 1.2em;
+      top: 40%;
     }
-
+  
     .blur-box {
-        width: 90%;
-        left: 5%;
-        right: 5%;
-        bottom: 5%;
-        padding: 10px;
+      width: 45%;
+      padding: 15px;
     }
-
+  
+    .blur-box1 {
+      bottom: 8%;
+      left: 4%;
+    }
+  
+    .blur-box2 {
+      bottom: 8%;
+      right: 4%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay-text {
+      font-size: 1em;
+      top: 6%;
+      left: 3%;
+    }
+  
+    .blur-box {
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      bottom: 5%;
+      padding: 10px;
+    }
+  
     .blur-box1,
     .blur-box2 {
-        bottom: 5%;
-        width: 90%;
-        left: 5%;
+      bottom: 5%;
+      width: 90%;
+      left: 5%;
     }
-}
+  }
+  
+  /* Large component with grid layout */
+  .large-components-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .large-component-grid {
+    width: 671px;
+    height: 281px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 45px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .large-box-title {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .grid-box {
+    margin-top: 20px;
+    width: 178px;
+    height: 73px;
+    background-color: #d7e3fc;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .box-text {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .box-number {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #000;
+  }
+  

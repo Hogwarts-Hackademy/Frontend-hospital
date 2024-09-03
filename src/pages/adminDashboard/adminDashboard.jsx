@@ -7,13 +7,24 @@ import "./adminDashboard.css";
 const ImageWithTextOverlay = ({
   imageSrc,
   text,
+  number,
   blurBox1Text,
   blurBox2Text,
 }) => {
   return (
     <div className="image-text-container">
-      <img src={imageSrc} alt="Dashboard Image" className="dashboard-image" />
+      <img
+        src={dashboardImage2}
+        alt="Dashboard with patient statistics"
+        style={{
+          width: "695px",
+          height: "340px",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
       <span className="overlay-text">{text}</span>
+      <span className="overlay-text2">{number}</span>
       <div className="blur-box blur-box1">
         <p>{blurBox1Text}</p>
       </div>
@@ -24,7 +35,45 @@ const ImageWithTextOverlay = ({
   );
 };
 
+// New component for the large container with grid layout
+const LargeComponentWithGrid = ({ boxContents, title }) => {
+  return (
+    <div className="large-component-grid">
+      <p className="large-box-title">{title}</p> {/* Title at the top left */}
+      {boxContents.map((content, index) => (
+        <div key={index} className="grid-box">
+          <p className="box-text">{content.text}</p>
+          <p className="box-number">{content.number}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const Dashboard = () => {
+  const boxContents1 = [
+    { text: "Beds", number: "42" },
+    { text: "Emergency rooms", number: "35" },
+    { text: "Ventilators", number: "28" },
+    { text: "ICU", number: "19" },
+    { text: "OT", number: "76" },
+  ];
+
+  const boxContents2 = [
+    { text: "Doctors", number: "85" },
+    { text: "Nurses", number: "42" },
+    { text: "Lab technicians", number: "28" },
+    { text: "Receptions", number: "19" },
+    { text: "Janitors", number: "52" },
+  ];
+
+  const boxContents3 = [
+    { text: "Out of stock medicines", number: "60" },
+    { text: "Ordered medicines", number: "12" },
+    { text: "Expired meds", number: "10" },
+    { text: "Departments", number: "8" },
+  ];
+
   return (
     <div className="dashboard">
       <Sidebar />
@@ -47,38 +96,20 @@ const Dashboard = () => {
           <ImageWithTextOverlay
             imageSrc={dashboardImage2}
             text="Patients"
+            number="169"
             blurBox1Text="Ambulance 24"
             blurBox2Text="Emergency Calls 24"
           />
 
-          <section className="dashboard-cards">
-            <div className="card bed-availability">
-              <h3>Bed Availability</h3>
-              <p>Beds: 24</p>
-              <p>ICU: 24</p>
-              <p>Emergency rooms: 24</p>
-              <p>OT: 24</p>
-              <p>Ventilators: 24</p>
-            </div>
-            <div className="card staff-availability">
-              <h3>Staff Availability</h3>
-              <p>Doctors: 24</p>
-              <p>Nurses: 24</p>
-              <p>Lab technicians: 24</p>
-              <p>Receptionists: 24</p>
-              <p>Janitors: 24</p>
-            </div>
-            <div className="card inventory">
-              <h3>Inventory</h3>
-              <p>Out of stock medicines: 24</p>
-              <p>Ordered medicines: 24</p>
-              <p>Expired meds: 24</p>
-            </div>
-            <div className="card other">
-              <h3>Others</h3>
-              <p>Departments: 24</p>
-            </div>
-          </section>
+          {/* Grid of large components */}
+          <div className="large-components-grid">
+            <LargeComponentWithGrid boxContents={boxContents1} title="Bed Availability" />
+            
+            <LargeComponentWithGrid boxContents={boxContents3} title="Inventory" />
+          </div>
+          <div className="large-components-grid2">
+          <LargeComponentWithGrid boxContents={boxContents2} title="Staff Availibility" />
+          </div>
         </main>
       </div>
     </div>
