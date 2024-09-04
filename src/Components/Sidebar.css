@@ -85,87 +85,9 @@
 	left: 0;
 }
 
-/* Responsive adjustments */
+/* Hide the sidebar at 768px or below */
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 15px;
-  }
-
-  .sidebar-header h2 {
-    font-size: 20px;
-  }
-
-  .sidebar-menu li {
-    margin: 12px 0;
-  }
-
-  .sidebar-footer {
-    margin: 10px 0;
-    padding-bottom: 15px;
-  }
-
-  .sidebar-footer p {
-    margin: 10px;
-  }
-
-  .sidebar-footer button {
-    padding: 8px;
-    border-radius: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  .sidebar-header h2 {
-    font-size: 18px;
-  }
-
-  .sidebar-menu li {
-    margin: 10px 0;
-  }
-
-  .sidebar-footer {
-    margin: 10px 0;
-    padding-bottom: 10px;
-  }
-
-  .sidebar-footer p {
-    margin: 10px;
-    font-size: 12px;
-  }
-
-  .sidebar-footer button {
-    padding: 6px;
-    border-radius: 10px;
-    font-size: 12px;
-  }
-}
-
-/* Optional: Collapsible Sidebar on Very Small Screens */
-@media (max-width: 400px) {
-  .sidebar {
     display: none;
-  }
-
-  .sidebar.collapsed {
-    display: block;
-    position: absolute;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: 100%;
-    overflow-y: auto;
-    background-color: #2d53da;
-    border-radius: 0 20px 20px 0;
   }
 }

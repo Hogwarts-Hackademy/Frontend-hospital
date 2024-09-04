@@ -13,7 +13,7 @@ const ImageWithTextOverlay = ({
 }) => {
   return (
     <div className="image-text-container">
-      <img src={imageSrc} alt="Dashboard Image" className="dashboard-image" />
+      <img src={imageSrc} alt="Dashboard" className="dashboard-image" />
       <span className="overlay-text">{text}</span>
       <div className="blur-box blur-box1">
         <p>{blurBox1Text}</p>
