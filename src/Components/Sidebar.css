@@ -1,5 +1,5 @@
 .sidebar {
-	margin: 0px;
+	margin: 0;
 	width: 15%;
 	background-color: #2d53da;
 	border-radius: 20px;
@@ -14,28 +14,28 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 50px;
-	gap: 10px; /* Space between the image and text */
+	padding: 30px 20px;
+	gap: 10px;
 }
 
 .sidebar-header img {
-	width: 60px; /* Adjust size as needed */
-	height: auto; /* Maintain aspect ratio */
+	width: 50px;
+	height: auto;
 }
 
 .sidebar-header h2 {
-	font-size: 24px;
+	font-size: 22px;
 }
 
 .sidebar-menu {
-	list-style: none; /* Remove default bullets */
+	list-style: none;
 	padding: 0;
 	text-align: left; 
 }
 
 .sidebar-menu li {
-	margin: 20px 0; /* Reduce margin for better spacing */
-	padding-left: 25px; /* Indent links to mimic bullets */
+	margin: 15px 0;
+	padding-left: 25px;
 	position: relative;
 }
 
@@ -43,15 +43,14 @@
 	background: rgba(217, 217, 217, 0.2);
 	text-align: center;
 	margin-top: 20px;
-	margin: 15px;
-	padding-bottom: 25px;
+	padding-bottom: 20px;
 	border-radius: 10px;
 }
 
 .sidebar-footer p {
-	margin: 25px;
-	font-weight: normal; /* Remove bold */
-	font-size: 14px; /* Adjust to a smaller size */
+	margin: 20px;
+	font-weight: normal;
+	font-size: 14px;
 }
 
 .sidebar-footer button {
@@ -79,6 +78,13 @@
 	padding: 12px;
 }
 
+.sidebar-menu li::before {
+	content: '•';
+	color: white;
+	position: absolute;
+	left: 0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .sidebar {
@@ -93,21 +99,21 @@
   }
 
   .sidebar-menu li {
-    margin: 15px 0;
+    margin: 12px 0;
   }
 
   .sidebar-footer {
-    margin: 15px 0;
+    margin: 10px 0;
     padding-bottom: 15px;
   }
 
   .sidebar-footer p {
-    margin: 15px;
+    margin: 10px;
   }
 
   .sidebar-footer button {
     padding: 8px;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 }
 
@@ -134,17 +140,32 @@
 
   .sidebar-footer p {
     margin: 10px;
+    font-size: 12px;
   }
 
   .sidebar-footer button {
     padding: 6px;
     border-radius: 10px;
+    font-size: 12px;
   }
 }
 
-.sidebar-menu li::before {
-	content: '•'; /* Bullet character */
-	color: white; /* Bullet color */
-	position: absolute; /* Position it relative to the list item */
-	left: 0; /* Align it to the left edge of the list item */
+/* Optional: Collapsible Sidebar on Very Small Screens */
+@media (max-width: 400px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.collapsed {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #2d53da;
+    border-radius: 0 20px 20px 0;
+  }
 }
