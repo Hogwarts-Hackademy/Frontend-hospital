@@ -15,6 +15,7 @@
 .hospital-profile .profile-card {
   width: 1365px;
   height: 473px;
+  height: auto;
   background-color: white;
   padding: 40px;
   border-radius: 10px;
@@ -25,12 +26,14 @@
 }
 
 .hospital-profile .profile-card h1 {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .hospital-profile .profile-card p {
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
@@ -55,7 +58,9 @@
 
 .details-item p,
 .details-item-full p {
-  margin: 40px;
+  margin: 10px 0; /* Adjusted margin */
+  font-size: 1rem;
+  
   font-size: 18px;
   line-height: 1.6;
 }
@@ -82,6 +87,7 @@
 
   .profile-card {
     width: 100%;
+    padding: 10px;
   }
 
   .details-grid {
@@ -91,35 +97,47 @@
 
 @media (max-width: 480px) {
   .hospital-profile .profile-card h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .hospital-profile .profile-card p,
   .details-item p,
   .details-item-full p {
-    font-size: 16px;
+    font-size: 0.875rem;
   }
 }
 .card-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 20px;
   /* margin-left: 20px;
   margin-left: 20px; */
 }
+.profile-card {
+  width: 50%;
+  padding: 0px;
+  text-align: left;
+}
 
 .info-card {
-  width: 363px;
-  height: 368px;
+  width: calc(33.333% - 20px); /* Adjust width to fit 3 cards in a row with spacing */
+  height: auto;
+  
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-bottom: 20px; /* Space between rows */
+  position: relative; /* For positioning the pseudo-elements */
+  overflow: hidden; /* To ensure lines do not overflow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+  letter-spacing: 2px;
 }
 
 .info-card  {
-  font-size: 26px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
@@ -130,7 +148,7 @@
 }
 
 .card-details p {
-  font-size: 18px;
+  font-size: 1rem;
   margin-top: 50px;
   margin-bottom: 40px;
   letter-spacing: 2px;
@@ -148,8 +166,13 @@
   }
 
   .info-card {
-    margin-bottom: 20px;
-    width: 100%;
+    width: 90%; /* Adjust width to fit smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .info-card {
+    width: 100%; /* Make each card full width on smaller screens */
   }
 }
 .info-card {
