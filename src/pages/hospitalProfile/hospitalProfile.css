@@ -7,55 +7,61 @@
   overflow: auto;
 }
 
-.contact-support {
-  margin-top: 20px;
-}
-
-.contact-support p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.contact-support button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .main-content {
   width: 80%;
   padding: 20px;
 }
 
-.hospital-profile h1 {
-  font-size: 28px;
+.hospital-profile .profile-card {
+  width: 1365px;
+  height: 473px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.hospital-profile .profile-card h1 {
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-.hospital-profile .details {
+.hospital-profile .profile-card p {
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
-.hospital-sections {
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.details-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
 }
 
-.section-card {
-  flex: 1;
-  min-width: 250px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.details-item-full {
+  /* grid-column: span 2; */
+  display: flex;
+  align-items: center;
 }
 
-.section-card h2 {
-  margin-bottom: 10px;
+.details-item p,
+.details-item-full p {
+  margin: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.details-item p strong,
+.details-item-full p strong {
+  font-weight: bold;
 }
 
 /* Responsive adjustments */
@@ -74,25 +80,122 @@
     padding: 10px;
   }
 
-  .section-card {
-    min-width: 100%;
+  .profile-card {
+    width: 100%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .hospital-profile h1 {
-    font-size: 24px;
+  .hospital-profile .profile-card h1 {
+    font-size: 28px;
   }
 
-  .sidebar h2, .section-card h2 {
-    font-size: 20px;
+  .hospital-profile .profile-card p,
+  .details-item p,
+  .details-item-full p {
+    font-size: 16px;
+  }
+}
+.card-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  /* margin-left: 20px;
+  margin-left: 20px; */
+}
+
+.info-card {
+  width: 363px;
+  height: 368px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.info-card  {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.info-card hr {
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.card-details p {
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.card-details p span {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-row {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .section-card p {
-    font-size: 14px;
+  .info-card {
+    margin-bottom: 20px;
+    width: 100%;
   }
+}
+.info-card {
+  width: 363px;
+  height: 368px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; /* For positioning the pseudo-elements */
+  overflow: hidden; /* To ensure lines do not overflow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+}
 
-  .contact-support p, .contact-support button {
-    font-size: 12px;
-  }
+.info-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Create the line effects */
+.info-card::before,
+.info-card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #0011a7; /* Color of the stroke */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for line movement */
+}
+
+.info-card::before {
+  top: 0; /* Start at the top */
+  left: -100%; /* Start outside the card */
+  transform: translateX(0); /* Reset transform */
+}
+
+.info-card::after {
+  bottom: 0; /* Start at the bottom */
+  right: -100%; /* Start outside the card */
+  transform: translateX(0); /* Reset transform */
+}
+
+.info-card:hover::before {
+  transform: translateX(100%); /* Move to the right on hover */
+}
+
+.info-card:hover::after {
+  transform: translateX(-100%); /* Move to the left on hover */
 }

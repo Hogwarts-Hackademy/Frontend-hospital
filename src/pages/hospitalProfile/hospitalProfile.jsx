@@ -8,82 +8,112 @@ const HospitalProfile = () => {
             <Sidebar/>
             <main className="main-content">
                 <section className="hospital-profile">
-                    <h1>Hospital Name</h1>
-                    <p>Location</p>
-                    <div className="details">
-                        <p>Ownership: Private</p>
-                        <p>Contact No: +91-1234567890</p>
-                        <p>Affiliation: ABC University</p>
-                        <p>Visiting Hours: 9 AM - 6 PM</p>
+                    <div className="profile-card">
+                        <h1>Hospital Name</h1>
+                        <p>Location</p>
+                        <div className="details-grid">
+                            <div className="details-item">
+                                <p><h5>Ownership:</h5>Mr. Dinesh Salvi</p>
+                            </div>
+                            <div className="details-item">
+                                <p><h5>Contact No:</h5> +91-1234567890</p>
+                            </div>
+                            <div className="details-item-full">
+                                <p><h5>Affiliation:</h5> ABC University</p>
+                            </div>
+                            <div className="details-item-full">
+                                <p><h5>Visiting Hours:</h5> 9 AM - 6 PM</p>
+                            </div>
+                        </div>
                     </div>
-                </section>
 
-                <section className="hospital-sections">
-                    <div className="section-card">
-                        <h2>Departments</h2>
-                        <p>Cardiology: 6</p>
-                        <p>Oncology: 6</p>
-                        <p>Neurology: 6</p>
+                    <div className="card-row">
+                        <div className="info-card">
+                            <h>Department’s</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Cardiology: <span>123</span></p>
+                                <p>Orthology: <span>456</span></p>
+                                <p>etc: <span>789</span></p>
+                            </div>
+                        </div>
+                        <div className="info-card">
+                            <h>Specialized Units</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>ICU: <span>321</span></p>
+                                <p>NICU: <span>654</span></p>
+                                <p>CCU: <span>987</span></p>
+                            </div>
+                        </div>
+                        <div className="info-card">
+                            <h>Diagnostic facilities</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Radiology: <span>111</span></p>
+                                <p>Laboratory: <span>222</span></p>
+                                <p>Pathology: <span>333</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="section-card">
-                        <h2>Specialized Units</h2>
-                        <p>ICU: 6</p>
-                        <p>NICU: 6</p>
-                        <p>CCU: 6</p>
+
+                    <div className="card-row">
+                        <div className="info-card">
+                            <h>Total Beds</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>ICU: <span>444</span></p>
+                                <p>NICU: <span>555</span></p>
+                                <p>CCU: <span>666</span></p>
+                            </div>
+                        </div>
+                        <div className="info-card">
+                            <h>No. Of Rooms</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Wards: <span>777</span></p>
+                                <p>OPD Rooms: <span>888</span></p>
+                                <p>General: <span>999</span></p>
+                            </div>
+                        </div>
+                        <div className="info-card">
+                            <h>Diagnostic facilities</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Radiology: <span>000</span></p>
+                                <p>Laboratory: <span>111</span></p>
+                                <p>Pathology: <span>222</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="section-card">
-                        <h2>Diagnostic Facilities</h2>
-                        <p>Radiology: 6</p>
-                        <p>Laboratory: 6</p>
-                        <p>Pathology: 6</p>
-                        <p>Operation Theaters: 6</p>
-                    </div>
-                </section>
-                <section className="hospital-section">
-                    <h1>Section</h1>
 
-                    <div className="section-grid">
-                        <div className="section-card">
-                            <h2>Total Beds</h2>
-                            <p>ICU: 6</p>
-                            <p>NICU: 6</p>
-                            <p>CCU: 6</p>
+                    <div className="card-row">
+                        <div className="info-card">
+                            <h>Lab Technician</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Radiology: <span>333</span></p>
+                                <p>Surgical: <span>444</span></p>
+                                <p>MLT: <span>555</span></p>
+                            </div>
                         </div>
-
-                        <div className="section-card">
-                            <h2>No. of Rooms</h2>
-                            <p>Wards: 6</p>
-                            <p>OPD Rooms: 6</p>
-                            <p>General: 6</p>
+                        <div className="info-card">
+                            <h>Emergency</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Ambulance: <span>666</span></p>
+                                <p>Doctor: <span>777</span></p>
+                                <p>E Rooms: <span>888</span></p>
+                            </div>
                         </div>
-
-                        <div className="section-card">
-                            <h2>Diagnostic Facilities</h2>
-                            <p>Radiology: 6</p>
-                            <p>Laboratory: 6</p>
-                            <p>Pathology: 6</p>
-                            <p>Operation Theaters: 6</p>
-                        </div>
-
-                        <div className="section-card">
-                            <h2>Lab Technician</h2>
-                            <p>Radiology: 6</p>
-                            <p>Surgical: 6</p>
-                            <p>MLT: 6</p>
-                        </div>
-
-                        <div className="section-card">
-                            <h2>Emergency</h2>
-                            <p>Ambulance: 6</p>
-                            <p>Doctor: 6</p>
-                            <p>E Rooms: 6</p>
-                        </div>
-
-                        <div className="section-card">
-                            <h2>Medical Staff</h2>
-                            <p>Doc: 6</p>
-                            <p>Number: 6</p>
-                            <p>Pathology: 6</p>
+                        <div className="info-card">
+                            <h>Medical Staff</h>
+                            <hr />
+                            <div className="card-details">
+                                <p>Doc: <span>999</span></p>
+                                <p>Number: <span>000</span></p>
+                                <p>Pathology: <span>111</span></p>
+                            </div>
                         </div>
                     </div>
                 </section>
