@@ -3,7 +3,7 @@ import './patientRecords.css';
 import Sidebar from '../../Components/Sidebar';
 const PatientRecords = () => {
     return (
-        <div className="dashboard-container">
+        <div className="dashboard-patient-record">
             <Sidebar/>
             <main className="main-content">
                 <header className="main-header">
