@@ -1,62 +1,93 @@
-/* Sidebar.css */
 .sidebar {
-  margin: 25px;
-  width: 20%;
-  background-color: #0381ff;
-  border-radius: 25px;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	margin: 0;
+	width: 15%;
+	background-color: #2d53da;
+	border-radius: 20px;
+	color: white;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 20px;
+	gap: 10px;
+}
+
+.sidebar-header img {
+	width: 50px;
+	height: auto;
 }
 
 .sidebar-header h2 {
-  font-size: 24px;
-  text-align: center;
+	font-size: 22px;
 }
 
 .sidebar-menu {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+	list-style: none;
+	padding: 0;
+	text-align: left; 
 }
 
 .sidebar-menu li {
-  margin: 20px 0;
+	margin: 15px 0;
+	padding-left: 25px;
+	position: relative;
 }
 
 .sidebar-footer {
-  margin-top: 20px;
-  margin: 25px;
-  padding-bottom: 25px;
+	background: rgba(217, 217, 217, 0.2);
+	text-align: center;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
 }
 
 .sidebar-footer p {
-  margin: 25px;
+	margin: 20px;
+	font-weight: normal;
+	font-size: 14px;
 }
 
 .sidebar-footer button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 25px;
+	width: 70%;
+	padding: 10px;
+	background-color: #1dcef5;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 7px;
 }
 
 .sidebar-link-text {
-  color: white;
-  text-decoration: none;
-  transition: 1000ms;
+	color: white;
+	text-decoration: none;
+	transition: 200ms;
 }
 
 .sidebar-link-text:hover {
-  color: #000000;
-  border: #ffffff;
-  border-style: solid;
-  background-color: white;
-  border-radius: 15px;
-  padding: 12px;
+	color: #000000;
+	border: #ffffff;
+	border-style: solid;
+	background-color: white;
+	border-radius: 15px;
+	padding: 12px;
+}
+
+.sidebar-menu li::before {
+	content: '•';
+	color: white;
+	position: absolute;
+	left: 0;
+}
+
+/* Hide the sidebar at 768px or below */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 }
