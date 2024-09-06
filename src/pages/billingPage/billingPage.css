@@ -1,0 +1,113 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent content overflow outside the viewport */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows main content to scroll if it overflows */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.patient-info, .contact-info {
+    flex: 1;
+}
+
+.billing-details {
+    margin-bottom: 20px;
+}
+
+.billing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.billing-table th, .billing-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.totals, .payment-info {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.print-button, .send-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.print-button {
+    background-color: #28a745;
+}
+
+.send-button {
+    background-color: #17a2b8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto; /* Adjust sidebar height for smaller screens */
+        overflow: visible; /* Remove overflow for smaller screens */
+    }
+
+    .header, .total-section {
+        flex-direction: column;
+    }
+
+    .billing-table th, .billing-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        font-size: 14px;
+    }
+
+    .billing-table th, .billing-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .print-button, .send-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

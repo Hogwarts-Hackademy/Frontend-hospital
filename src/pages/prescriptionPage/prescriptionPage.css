@@ -1,0 +1,118 @@
+.prescription-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevents the parent container from scrolling */
+}
+
+.content-container {
+  margin: 25px;
+  border: black;
+  border-radius: 25px;
+  background-color: white;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enables vertical scrolling */
+  max-height: calc(100vh - 50px); /* Adjusts the height to prevent overflow from the viewport */
+}
+
+.patient-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient-info p {
+  margin: 30px;
+  font-size: 25px;
+}
+
+.form-group {
+  margin: 15px;
+  font-size: large;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.urgent-bed {
+  margin: 20px 0;
+}
+
+.urgent-bed label {
+  margin-right: 20px;
+}
+
+.tests-section {
+  margin-top: 20px;
+}
+
+.tests-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tests-section ul li {
+  margin: 5px 0;
+}
+
+.view-test-btn,
+.request-test-btn,
+.print-report-btn {
+  background-color: #2f74c0;
+  color: white;
+  border: none;
+  border-style: solid;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 15px;
+  font-size: 20px;
+}
+.tests-section {
+  margin-top: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-btn {
+  background-color: #2f74c0;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content label {
+  display: block;
+  padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

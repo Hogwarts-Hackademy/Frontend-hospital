@@ -1,11 +1,75 @@
-.app {
-  display: flex;
-}
+/* App.css */
 
-.main {
-  flex: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
+/* Ensure the app takes up the full height of the viewport */
+.App {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
 }
+
+/* General reset for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the body and html to ensure full height */
+html, body {
+  height: 100%;
+}
+
+/* Ensure the entire application takes up the full viewport height and width */
+html, body, #root, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent overflow due to content */
+}
+
+/* Set the max width and height for the application */
+.App {
+  max-width: 1920px;
+  max-height: 1080px;
+  margin: auto; /* Center the application on larger screens */
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5; /* Optional background color */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Optional: Add some padding around the routes */
+.App > div {
+  padding: 20px;
+  flex-grow: 1; /* Ensures the content area takes up remaining space */
+}
+
+/* General link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive layout for smaller devices */
+@media (max-width: 768px) {
+  .App > div {
+    padding: 10px;
+  }
+}
+
+/* Responsive layout for smaller devices with scaling down elements */
+@media (max-width: 1200px) {
+  .App {
+    max-width: 100%; /* Allow full width usage on smaller screens */
+    max-height: 100%; /* Allow full height usage on smaller screens */
+    padding: 10px;
+  }
+
+  .App > div {
+    padding: 10px;
+  }
+}
+
