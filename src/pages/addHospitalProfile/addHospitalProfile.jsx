@@ -14,75 +14,41 @@ const AddHospitalProfile = () => {
         <div className="hospital-profile-container">
             <Sidebar />
             <div className="main-content">
-                {step === 1 ? (
-                    <div className="form-container">
-                        <h1>Hospital Details</h1>
-                        <form>
-                            <div className="form-group">
-                                <label>Hospital Name</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Address</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Contact No.</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Established Date</label>
-                                <input type="date" />
-                            </div>
-                            <div className="form-group">
-                                <label>Ownership Detail</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Visiting Hours</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Affiliations</label>
-                                <input type="text" />
-                            </div>
-                            <button type="submit" onClick={handleNext}>
-                                Next
-                            </button>
-                        </form>
-                    </div>
-                ) : (
-                    <div className="form-container">
-                        <h1>Hospital Details</h1>
-                        <form>
-                            <div className="form-group">
-                                <label>Department</label>
-                                <select>
-                                    <option value="department1">Department 1</option>
-                                    <option value="department2">Department 2</option>
-                                    {/* Add more options as needed */}
-                                </select>
-                            </div>
-                            <div className="form-group">
-                                <label>Total Wards</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Ward 1 Bed</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>Ward 2 Bed</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-group">
-                                <label>OPD</label>
-                                <input type="text" />
-                            </div>
-                            <button type="submit">Save</button>
-                        </form>
-                    </div>
-                )}
+                <div className="card">
+                    <h2>Hospital Profile</h2>
+                    <form>
+                        <div className="input-group">
+                            <label>Hospital Name</label>
+                            <input type="text"/>
+                        </div>
+                        <div className="input-group">
+                            <label>Address</label>
+                            <input type="text"/>
+                        </div>
+                        <div className="input-group">
+                            <label>Contact No.</label>
+                            <input type="text"/>
+                        </div>
+                        <div className="input-group">
+                            <label>Established Date</label>
+                            <input type="email"/>
+                        </div>
+                        <div className="input-group">
+                            <label>Specialty</label>
+                            <input type="text"/>
+                        </div>
+                        <div className="input-group">
+                            <label></label>
+                            <input type="number" />
+                        </div>
+                        <div className="input-group">
+                            <label>Ownership Detail</label>
+                            <input type="url"/>
+                        </div>
+
+                        <button onClick={handleNext}>Next Step</button>
+                    </form>
+                </div>
             </div>
         </div>
     );
