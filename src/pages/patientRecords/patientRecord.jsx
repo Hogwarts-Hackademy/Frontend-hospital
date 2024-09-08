@@ -1,5 +1,5 @@
 import React from 'react';
-import './patientRecords.css';
+import './patientRecord.css';
 import Sidebar from '../../Components/Sidebar';
 const PatientRecords = () => {
     return (
