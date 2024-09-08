@@ -5,19 +5,11 @@ body {
   background-color: #f0f4ff;
 }
 
-.dashboard-container {
+.dashboard-patient-record {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 100%;
-}
-
-.main-content {
-  background-color: #f0f4ff;
-  flex-grow: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
 }
 
 .main-header {
@@ -53,8 +45,12 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
-.records-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+.records-table tbody tr.even-row {
+  background-color: rgba(171, 196, 255, 1);
+}
+
+.records-table tbody tr.odd-row {
+  background-color: rgba(215, 227, 252, 1);
 }
 
 /* Make the table scrollable if the content overflows */

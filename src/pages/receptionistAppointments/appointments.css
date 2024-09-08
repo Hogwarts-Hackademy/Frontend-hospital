@@ -1,4 +1,4 @@
-/* Dashboard.css */
+/* Appointments.css */
 
 .dashboard-container {
   display: flex;
@@ -6,29 +6,9 @@
   height: 100vh;
 }
 
-.help-section {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #1c3b64;
-  border-radius: 5px;
-}
-
-.help-section p {
-  font-size: 14px;
-}
-
-.help-section button {
-  background-color: #19aaff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .main-content {
   flex-grow: 1;
-  background-color: #f3f3f3;
+  background-color: #f9fafc;
   padding: 20px;
   overflow-y: auto;
 }
@@ -40,29 +20,88 @@
   margin-bottom: 20px;
 }
 
-.filter-button {
+.appointments-title {
+  font-size: 24px;
+  text-align: center;
+  flex-grow: 1;
+  letter-spacing: 0.9rem;
+}
+
+.search-bar-app {
+ border-radius: 10px;
+  border-color: #ffffff;
   padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.filter-button {
+  padding: 8px 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
 }
-.search-bar{
-  border-radius: 5px;
-  padding: 10px;
- }
 
 .records-table {
   overflow-x: auto;
 }
 
+
+
+.records-table table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
 .records-table table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.records-table table th, .records-table table td {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: left;
+.records-table table th {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+/* Row coloring for pattern */
+.records-table table tr.even-row,
+.records-table table tr.repeat-colors.even-row {
+  background-color: rgba(171, 196, 255, 1);
+}
+
+.records-table table tr.odd-row,
+.records-table table tr.repeat-colors.odd-row {
+  background-color: rgba(215, 227, 252, 1);
+}
+
+.expanded-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.expanded-content p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.cancel-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #6b81ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 10px;
+  font-size: 12px;
+  height: 40px;
 }
 
 /* Responsive adjustments */
@@ -75,7 +114,8 @@
     padding: 10px;
   }
 
-  .records-table table th, .records-table table td {
+  .records-table table th,
+  .records-table table td {
     font-size: 14px;
     padding: 8px;
   }
@@ -90,7 +130,8 @@
     font-size: 20px;
   }
 
-  .records-table table th, .records-table table td {
+  .records-table table th,
+  .records-table table td {
     font-size: 12px;
     padding: 6px;
   }

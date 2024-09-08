@@ -1,6 +1,7 @@
 .hospital-profile-container {
   display: flex;
   height: 100vh;
+  background-color: #121c36;;
 }
 
 .contact-support {
@@ -12,78 +13,508 @@
   text-align: center;
 }
 
-.main-content {
+.main-content-hos {
   flex: 1;
   padding: 40px;
   overflow-y: auto;
-  background-color: #f8f9fc;
+  background-color: #f8f9fc; 
+  margin-top: 50px;
 }
 
-.form-container {
-  background-color: #fff;
-  padding: 30px;
+.card {
+  width: 1200px;
+  height: 661px;
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px;
+  overflow-y: auto;
+  height: fit-content;
 }
 
-.form-container h1 {
-  font-size: 28px;
+.card h2 {
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.card form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
 }
 
-.form-group label {
-  display: block;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.contact-row {
+  display: flex;
+  gap: 10px;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.card button {
+  width: 154px;
+  grid-column: span 2; /* Button spans across two columns */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  margin-left: 990px;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px; /* Add margin between inputs */
+}
+
+.add-btn, .delete-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  width: 60%; /* This retains your previous width */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.add-icon, .delete-icon {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-icon {
+  color: green;
+  right: 35px;
+  position: absolute;
+  top: 10px;
+  /* right: 30px; */
+}
+
+.delete-icon {
+  right: 45px;
+  color: red;
+}
+
+/* To ensure the input width is not affected by the icons */
+.input-group-contact {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group-contact label {
+  font-size: 16px;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-.form-group input, .form-group select {
-  width: 100%;
+
+.input-group-contact input {
+  width: 100%; /* Keep input width within its grid */
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
 }
 
-button[type="submit"] {
-  background-color: #1a73e8;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
+
+
+.input-group-contact label {
   font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hospital-profile-container {
-    flex-direction: column;
-  }
 
-  .main-content {
-    padding: 10px;
-  }
-
-  .form-container h1 {
-    font-size: 24px;
-  }
+.input-group-contact input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
 }
 
-@media (max-width: 480px) {
-  .form-container h1 {
-    font-size: 20px;
-  }
+.input-group-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .form-group label, .form-group input, .form-group select {
-    font-size: 14px;
-  }
 
-  button[type="submit"] {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
+
+
+.input-group-date input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-date label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-date input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.input-group-hospitalname input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-hospitalname label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-hospitalname input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-hospitalname {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.input-group-address input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-address label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-address input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.input-group-owndetail input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-owndetail label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-owndetail input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-owndetail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+.input-group-aff input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-aff label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-aff input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-aff {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+.input-group-hrs input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-hrs label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-hrs input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-hrs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hospital-profile-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121c36;
+}
+
+.main-content-hos {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f8f9fc;
+  margin-top: 50px;
+}
+
+.card {
+  width: 1200px;
+  height: 661px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px;
+  overflow-y: auto;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(171, 196, 255, 1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 50px;
+    width: 300px; /* Set your desired width */
+    height: auto; /* Set your desired height */
+    overflow: hidden; /* Prevents content from overflowing */
+    /* Other styling */
+  
+}
+
+.ward-bed-container {
+  max-height: 100px;
+  padding: 15px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.add-icon-step2 {
+
+  font-size: 26px;
+  color: rgb(2, 135, 187);
+  position: absolute;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+.delete-icon-step2 {
+  font-size: 16px;
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.delete-icon {
+  font-size: 16px;
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.input-group select {
+  width: 100%; /* Full width to match other input fields */
+  padding: 10px; /* Match the padding of other input fields */
+  border: 1px solid ; /* Match the border of other input fields */
+  border-radius: 4px; /* Match the border radius of other input fields */
+  font-size: 16px; /* Match the font size of other input fields */
+  background-color: #fff; /* Match the background color of other input fields */
+  appearance: none; /* Remove default styling */
+  box-sizing: border-box; /* Include padding and border in width/height */
+  border-color: #007bff;
+}
+
+.input-group select:focus {
+  outline: none; /* Remove default focus outline */
+   /* Border color on focus */
+  box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.2); /* Subtle focus shadow */
 }

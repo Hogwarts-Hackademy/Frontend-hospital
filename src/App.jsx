@@ -7,7 +7,7 @@ import AddStaff from "./pages/addStaff/addStaff.jsx";
 import PrescriptionPage from "./pages/prescriptionPage/prescriptionPage.jsx";
 import RegisterPatient from "./pages/registerPatient/registerPatient.jsx";
 import QueueList from "./pages/queueList/queueList.jsx";
-import PatientRecords from "./pages/patientRecords/patientRecords.jsx";
+import PatientRecords from "./pages/patientRecords/patientRecord.jsx";
 import NurseNotes from "./pages/nurseNotes/nurseNotes.jsx";
 import Appointments from "./pages/receptionistAppointments/appointments.jsx";
 import DoctosStatus from "./pages/doctosStatus/doctosStatus.jsx";
