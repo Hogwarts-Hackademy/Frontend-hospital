@@ -33,7 +33,7 @@ const AddHospitalProfile = () => {
                         </div>
                         <div className="input-group-date">
                             <label>Established Date</label>
-                            <input type="email"/>
+                            <input type="date"/>
                         </div>
                         <div className="input-group-owndetail">
                             <label>Ownership Detail</label>
