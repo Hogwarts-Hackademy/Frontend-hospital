@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { FaPlus, FaTimes } from "react-icons/fa"; // Import icons
+import { FaPlus, FaTimes } from "react-icons/fa";
 import "./addHospitalProfile.css";
 import Sidebar from "../../Components/Sidebar";
 
 const AddHospitalProfile = () => {
   const [contacts, setContacts] = useState([""]);
-  const [step, setStep] = useState(1); // Add step state here
+  const [step, setStep] = useState(1);
+  const [cards, setCards] = useState([{}]);
 
   const handleAddContact = () => {
     setContacts([...contacts, ""]);
@@ -16,9 +17,33 @@ const AddHospitalProfile = () => {
     setContacts(updatedContacts);
   };
 
+  const handleAddCard = () => {
+    const newCard = {
+      totalWards: cards.length ? cards[cards.length - 1].totalWards + 1 : 1,
+    };
+    setCards([...cards, newCard]);
+  };
+
+  const handleRemoveCard = (index) => {
+    const updatedCards = cards.filter((_, i) => i !== index);
+    setCards(updatedCards);
+  };
+
+  const handleWardChange = (index, wardCount) => {
+    const updatedCards = [...cards];
+    updatedCards[index].totalWards = Math.max(parseInt(wardCount, 10), 1);
+    setCards(updatedCards);
+  };
+
   const handleNext = (e) => {
     e.preventDefault();
-    setStep(2); // This moves to the next step
+    setStep(2);
+  };
+
+  const handleContactChange = (index, value) => {
+    const updatedContacts = [...contacts];
+    updatedContacts[index] = value;
+    setContacts(updatedContacts);
   };
 
   return (
@@ -87,8 +112,57 @@ const AddHospitalProfile = () => {
 
             {step === 2 && (
               <>
-                {/* Step 2 form content goes here */}
-                <h3>Step 2: More Information</h3>
+                <div className="card-container">
+                  {cards.map((card, index) => (
+                    <div className="card-inner" key={index}>
+                      <div className="input-group">
+                        <label>Department</label>
+                        <select>
+                          <option value="">Select Department</option>
+                          <option value="surgery">Surgery</option>
+                          <option value="cardiology">Cardiology</option>
+                          <option value="neurology">Neurology</option>
+                        </select>
+                      </div>
+
+                      <div className="input-group">
+                        <label>Total Wards</label>
+                        <input
+                          type="number"
+                          min="1" // Set the minimum value to 1
+                          onChange={(e) =>
+                            handleWardChange(index, e.target.value)
+                          }
+                        />
+                      </div>
+
+                      <div className="ward-bed-container">
+                        {[...Array(parseInt(card.totalWards || 0))].map(
+                          (_, i) => (
+                            <div className="input-group" key={i}>
+                              <label>Ward {i + 1} Bed</label>
+                              <input type="text"/>
+                            </div>
+                          )
+                        )}
+                      </div>
+
+                      <div className="input-group">
+                        <label>OPD</label>
+                        <input type="number" min={0} />
+                      </div>
+
+                      {index > 0 && (
+                        <FaTimes
+                          className="delete-icon-step2"
+                          onClick={() => handleRemoveCard(index)}
+                        />
+                      )}
+                    </div>
+                  ))}
+                  <FaPlus className="add-icon-step2" onClick={handleAddCard} />
+                </div>
+
                 <button onClick={() => setStep(1)}>Back to Step 1</button>
               </>
             )}

@@ -30,6 +30,7 @@
   padding: 20px;
   margin: 30px;
   overflow-y: auto;
+  height: fit-content;
 }
 
 .card h2 {
@@ -167,6 +168,10 @@
 
 .add-icon {
   color: green;
+  right: 35px;
+  position: absolute;
+  top: 10px;
+  /* right: 30px; */
 }
 
 .delete-icon {
@@ -419,4 +424,97 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.hospital-profile-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121c36;
+}
+
+.main-content-hos {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f8f9fc;
+  margin-top: 50px;
+}
+
+.card {
+  width: 1200px;
+  height: 661px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px;
+  overflow-y: auto;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(171, 196, 255, 1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 50px;
+    width: 300px; /* Set your desired width */
+    height: auto; /* Set your desired height */
+    overflow: hidden; /* Prevents content from overflowing */
+    /* Other styling */
+  
+}
+
+.ward-bed-container {
+  max-height: 100px;
+  padding: 15px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.add-icon-step2 {
+
+  font-size: 26px;
+  color: rgb(2, 135, 187);
+  position: absolute;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+.delete-icon-step2 {
+  font-size: 16px;
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.delete-icon {
+  font-size: 16px;
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.input-group select {
+  width: 100%; /* Full width to match other input fields */
+  padding: 10px; /* Match the padding of other input fields */
+  border: 1px solid ; /* Match the border of other input fields */
+  border-radius: 4px; /* Match the border radius of other input fields */
+  font-size: 16px; /* Match the font size of other input fields */
+  background-color: #fff; /* Match the background color of other input fields */
+  appearance: none; /* Remove default styling */
+  box-sizing: border-box; /* Include padding and border in width/height */
+  border-color: #007bff;
+}
+
+.input-group select:focus {
+  outline: none; /* Remove default focus outline */
+   /* Border color on focus */
+  box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.2); /* Subtle focus shadow */
 }
