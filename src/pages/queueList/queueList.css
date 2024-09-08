@@ -53,7 +53,7 @@ th {
   background-color: #e0e7ff;
 }
 
-td {
+.patient-queue td {
   background-color: #dbe5ff;
   font-weight: bold;
 }

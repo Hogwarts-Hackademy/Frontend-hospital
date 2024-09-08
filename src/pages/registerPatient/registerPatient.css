@@ -90,7 +90,8 @@
     background-color: #0056b3;
 }
 
-input[type="text"], input[type="date"] {
+
+.register-container input[type="text"], input[type="date"] {
     width: 100%;
     padding: 12px;
     border: 1px solid rgb(0, 64, 255);
