@@ -1,68 +1,126 @@
+/* Main layout */
 .dashboard-container {
     display: flex;
     flex-direction: row;
-    flex: 1 1;
-    padding: 20px;
     height: 100vh;
-    background-color: #f0f3fb;
-    overflow-y: auto;
+    background-color: #edf0f7;
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Adjust font family */
 }
 
 .main-content {
     flex: 1;
     padding: 20px;
-    overflow-y: auto; /* Allows main content to scroll if it overflows */
+    background-color: #f0f3fb;
 }
 
-.header {
+.grid-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px; /* Adjust the gap between sections */
+}
+
+/* Header section */
+.billing-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px; /* Font size matching image */
+    font-weight: 600; /* Adjust weight to semi-bold */
+    letter-spacing: 0.5px; /* Adjust letter spacing */
+    line-height: 1.8; /* Adjust line height for proper spacing */
 }
 
-.patient-info, .contact-info {
+.patient-details, .consultant-details {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    gap: 15px; /* Add gap for spacing between rows */
 }
 
-.billing-details {
-    margin-bottom: 20px;
+.patient-details p, .consultant-details p {
+    margin: 0; /* Remove default margins */
+    font-size: 18px; /* Adjust font size */
+    color: #333; /* Darker font color matching the image */
+}
+
+/* Billing table */
+.billing-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 2; /* Let the table take more space */
+    font-size: 16px;
+    font-weight: 500; /* Adjust font weight */
+    letter-spacing: 0.3px; /* Adjust letter spacing */
 }
 
 .billing-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #fff;
+    font-size: 16px;
 }
 
 .billing-table th, .billing-table td {
-    padding: 12px;
-    text-align: left;
+    padding: 12px 15px;
     border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
-.total-section {
+.billing-table th {
+    background-color: #f0f0f0;
+    font-weight: 700; /* Bold headers */
+    letter-spacing: 0.5px;
+}
+
+/* Payment summary */
+.payment-summary {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Let the summary section take less space */
+    font-size: 18px;
+    font-weight: 500; /* Matching font weight */
+    letter-spacing: 0.5px;
+    color: #333;
 }
 
-.totals, .payment-info {
-    flex: 1;
+.summary-details p, .payment-info p {
+    margin: 10px 0; /* Adjust margin for better spacing */
+    font-size: 18px;
 }
 
-.actions {
+.payment-info {
+    text-align: right;
+    margin-top: 15px; /* Added margin for better spacing */
+}
+
+/* Action buttons */
+.billing-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-right: 20px;
 }
 
 .print-button, .send-button {
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .print-button {
@@ -75,39 +133,15 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .dashboard-container {
-        flex-direction: row;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto; /* Adjust sidebar height for smaller screens */
-        overflow: visible; /* Remove overflow for smaller screens */
-    }
-
-    .header, .total-section {
+    .billing-header, .payment-summary {
         flex-direction: column;
-    }
-
-    .billing-table th, .billing-table td {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .actions {
-        flex-direction: column;
-        gap: 10px;
+        text-align: left;
     }
 }
 
 @media (max-width: 480px) {
-    .sidebar {
-        font-size: 14px;
-    }
-
     .billing-table th, .billing-table td {
-        font-size: 12px;
-        padding: 6px;
+        font-size: 14px;
     }
 
     .print-button, .send-button {
