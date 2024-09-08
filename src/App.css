@@ -3,7 +3,7 @@
 /* Ensure the app takes up the full height of the viewport */
 .App {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
 }
@@ -35,7 +35,7 @@ html, body, #root, .App {
   max-height: 1080px;
   margin: auto; /* Center the application on larger screens */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #f0f2f5; /* Optional background color */
   padding: 20px;
   box-sizing: border-box;

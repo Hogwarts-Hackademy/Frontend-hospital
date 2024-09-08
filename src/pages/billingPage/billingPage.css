@@ -1,7 +1,11 @@
 .dashboard-container {
     display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    padding: 20px;
     height: 100vh;
-    overflow: hidden; /* Prevent content overflow outside the viewport */
+    background-color: #f0f3fb;
+    overflow-y: auto;
 }
 
 .main-content {
@@ -72,7 +76,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .dashboard-container {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .sidebar {
