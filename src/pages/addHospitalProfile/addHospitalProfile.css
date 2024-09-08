@@ -1,6 +1,7 @@
 .hospital-profile-container {
   display: flex;
   height: 100vh;
+  background-color: #121c36;;
 }
 
 .contact-support {
@@ -12,11 +13,12 @@
   text-align: center;
 }
 
-.main-content {
+.main-content-hos {
   flex: 1;
   padding: 40px;
   overflow-y: auto;
   background-color: #f8f9fc; 
+  margin-top: 50px;
 }
 
 .card {
@@ -26,7 +28,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  
+  margin: 30px;
   overflow-y: auto;
 }
 
@@ -111,7 +113,81 @@
 
 
 
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px; /* Add margin between inputs */
+}
 
+.add-btn, .delete-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  width: 60%; /* This retains your previous width */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.add-icon, .delete-icon {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-icon {
+  color: green;
+}
+
+.delete-icon {
+  right: 45px;
+  color: red;
+}
+
+/* To ensure the input width is not affected by the icons */
+.input-group-contact {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group-contact label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
 
 .input-group-contact input {
@@ -132,7 +208,7 @@
 
 
 .input-group-contact input {
-  width: 60%; /* Keep input width within its grid */
+  width: 100%; /* Keep input width within its grid */
   padding: 8px;
   font-size: 14px;
   border: 1px solid rgb(0, 64, 255);

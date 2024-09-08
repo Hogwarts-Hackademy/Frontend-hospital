@@ -36,7 +36,7 @@ html, body, #root, .App {
   margin: auto; /* Center the application on larger screens */
   display: flex;
   flex-direction: row;
-  background-color: #f0f2f5; /* Optional background color */
+  background-color: #f0f3fb; /* Optional background color */
   padding: 20px;
   box-sizing: border-box;
 }
