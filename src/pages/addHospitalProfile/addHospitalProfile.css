@@ -16,7 +16,7 @@
   flex: 1;
   padding: 40px;
   overflow-y: auto;
-  background-color: #f8f9fc;
+  background-color: #f8f9fc; 
 }
 
 .card {
@@ -26,7 +26,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: center;
+  
   overflow-y: auto;
 }
 
@@ -37,7 +37,7 @@
 
 .card form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
 }
 
@@ -106,4 +106,241 @@
 
 .card button:hover {
   background-color: #0056b3;
+}
+
+
+
+
+
+
+
+.input-group-contact input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-contact label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-contact input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+.input-group-date input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-date label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-date input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.input-group-hospitalname input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-hospitalname label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-hospitalname input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-hospitalname {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.input-group-address input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-address label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-address input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.input-group-owndetail input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-owndetail label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-owndetail input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-owndetail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+.input-group-aff input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-aff label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-aff input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-aff {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+.input-group-hrs input {
+  width: 100%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+
+
+.input-group-hrs label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.input-group-hrs input {
+  width: 60%; /* Keep input width within its grid */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 26px;
+}
+
+.input-group-hrs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
