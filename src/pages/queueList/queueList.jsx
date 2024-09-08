@@ -24,13 +24,13 @@ const QueueList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <h2>Current patient-</h2>
+                            <h3>Current patient-</h3>
                             <tr>
                                 <td>haai</td>
                                 <td>15</td>
                                 <td>caty</td>
                             </tr>
-                                <h2>Next patient-</h2>
+                                <h3>Next patient-</h3>
                             <tr>
                                 <td>haai</td>
                                 <td>15</td>
