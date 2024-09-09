@@ -2,10 +2,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
     
 }
 
@@ -13,7 +10,16 @@
     text-align: center;
     margin-bottom: 20px;
 }
-
+.card-nur{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
 .notes-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -153,3 +159,53 @@ margin-left: 30%;
     bottom: 15pzontaox;
 }
 
+/* General styles for the horizontal line */
+.horizontal-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0; /* Space around the line */
+    width: 100%; /* Full width */
+}
+
+.horizontal-line-submit {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0; /* Space around the line */
+    width: 100%; /* Full width */
+}
+
+.vertical-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Center horizontally */
+    border-left: 1px solid #ccc;
+    width: 0; /* No width for the line */
+    transform: translateX(-50%); /* Center the line */
+    height: calc(100% - 100px); /* Adjust height to stop at Submit button */
+}
+
+.card-nur {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notes-section-b {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    gap: 20px;
+    margin-top: 5%;
+    position: relative;
+}
+
+/* Remove extra horizontal lines */
+.notes-section-b hr {
+    display: none; /* Hide unwanted horizontal line */
+}
