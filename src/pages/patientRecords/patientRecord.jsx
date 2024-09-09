@@ -63,7 +63,7 @@ const PatientRecords = () => {
                                     <td>{patient.fullName}</td>
                                     <td>{new Date().getFullYear() - new Date(patient.dateOfBirth).getFullYear()}</td>
                                     <td>{patient.contactInformation.address}</td>
-                                    <td>{getLastVisitDate(patient.visitHistory)}</td> {/* Display the last date of visit */}
+                                    <td>{getLastVisitDate(patient.visitHistory)}</td>
                                     <td>{patient.contactInformation.phone}</td>
                                 </tr>
                             ))}
