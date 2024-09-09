@@ -47,6 +47,8 @@
 }
 
 .records-table {
+  padding-right: 100px;
+  padding-left: 100px;
   margin-top: 40px;
 }
 
@@ -110,4 +112,16 @@
     font-size: 12px;
     padding: 6px;
   }
+}
+.input-group-doc select {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  appearance: none;
+  box-sizing: border-box;
+  border-color: #007bff;
+  margin-bottom: 20px; /* Add some spacing */
 }
