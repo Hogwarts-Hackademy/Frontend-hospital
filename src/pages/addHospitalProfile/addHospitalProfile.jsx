@@ -102,7 +102,7 @@ const AddHospitalProfile = () => {
                   <input type="text" placeholder="Enter affiliation details" />
                 </div>
                 <div className="input-group-hrs">
-                  <label>Visiting Hours</label>
+                  <label>Email</label>
                   <input type="url" />
                 </div>
 
@@ -115,8 +115,9 @@ const AddHospitalProfile = () => {
                 <div className="card-container">
                   {cards.map((card, index) => (
                     <div className="card-inner" key={index}>
+                  
                       <div className="input-group">
-                        <label>Department</label>
+                        <label>Department {index + 1}</label>
                         <select>
                           <option value="">Select Department</option>
                           <option value="surgery">Surgery</option>
