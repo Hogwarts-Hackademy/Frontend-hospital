@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './patientRecord.css';
 import Sidebar from '../../Components/Sidebar';
+import patientAPI from '../../config/patientAPI'; // Import the API URLs
 
 const PatientRecords = () => {
-    const patientData = [
-        { name: "haai", age: 15, address: "some place", date: "12/12/2022", phone: "1234567890" },
-        { name: "John Doe", age: 28, address: "another place", date: "01/11/2023", phone: "0987654321" },
-        { name: "Jane Smith", age: 34, address: "place three", date: "22/10/2023", phone: "1122334455" },
-        { name: "Alice Johnson", age: 22, address: "place four", date: "14/09/2023", phone: "2233445566" },
-        { name: "Bob Brown", age: 47, address: "place five", date: "05/08/2023", phone: "3344556677" },
-        { name: "Charlie Black", age: 19, address: "place six", date: "16/07/2023", phone: "4455667788" },
-    ];
+    const [patientRecords, setPatientRecords] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    // Function to fetch all patient records
+    const fetchPatientRecords = async () => {
+        try {
+            const response = await fetch(patientAPI.FETCH_ALL_PATIENTS_URL);
+            if (!response.ok) {
+                throw new Error("Failed to fetch patient records");
+            }
+            const data = await response.json();
+            setPatientRecords(data); // Set the fetched patient data to state
+            setLoading(false);
+        } catch (err) {
+            setError(err.message);
+            setLoading(false);
+        }
+    };
+
+    // Get the last date of visit from visitHistory array
+    const getLastVisitDate = (visitHistory) => {
+        if (!visitHistory || visitHistory.length === 0) return 'No visits yet';
+        // Sort by dateOfVisit in descending order to get the latest visit
+        const latestVisit = visitHistory.sort((a, b) => new Date(b.dateOfVisit) - new Date(a.dateOfVisit))[0];
+        return new Date(latestVisit.dateOfVisit).toLocaleDateString();
+    };
+
+    useEffect(() => {
+        fetchPatientRecords(); // Fetch patient records on component mount
+    }, []);
+
+    if (loading) return <p>Loading patient records...</p>;
+    if (error) return <p>Error: {error}</p>;
 
     return (
         <div className="dashboard-patient-record">
@@ -31,13 +58,13 @@ const PatientRecords = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {patientData.map((patient, index) => (
-                                <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                                    <td>{patient.name}</td>
-                                    <td>{patient.age}</td>
-                                    <td>{patient.address}</td>
-                                    <td>{patient.date}</td>
-                                    <td>{patient.phone}</td>
+                        {patientRecords.map((patient) => (
+                                <tr key={patient.patientID}>
+                                    <td>{patient.fullName}</td>
+                                    <td>{new Date().getFullYear() - new Date(patient.dateOfBirth).getFullYear()}</td>
+                                    <td>{patient.contactInformation.address}</td>
+                                    <td>{getLastVisitDate(patient.visitHistory)}</td> {/* Display the last date of visit */}
+                                    <td>{patient.contactInformation.phone}</td>
                                 </tr>
                             ))}
                         </tbody>
