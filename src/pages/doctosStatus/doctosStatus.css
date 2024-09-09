@@ -65,6 +65,14 @@
   border-bottom: 1px solid #ccc;
 }
 
+.records-table tbody tr.even-row {
+  background-color: rgba(171, 196, 255, 1);
+}
+
+.records-table tbody tr.odd-row {
+  background-color: rgba(215, 227, 252, 1);
+}
+
 .status-green {
   color: green;
 }

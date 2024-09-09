@@ -27,7 +27,7 @@ const DoctosStatus = () => {
                         </thead>
                         <tbody>
                             {doctors.map((doctor, index) => (
-                                <tr key={index}>
+                                <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
                                     <td>{doctor.name}</td>
                                     <td>
                                         <span className={doctor.status === 'available' ? 'status-green' : 'status-red'}>
