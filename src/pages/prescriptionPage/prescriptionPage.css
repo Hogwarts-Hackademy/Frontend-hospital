@@ -1,118 +1,177 @@
-.prescription-container {
+.prescription-container-pre {
   display: flex;
   height: 100vh;
-  overflow: hidden; /* Prevents the parent container from scrolling */
+  background-color: #f0f3fb;
 }
 
-.content-container {
+.content-container-pre {
   margin: 25px;
-  border: black;
-  border-radius: 25px;
-  background-color: white;
-  flex: 1;
+  border-radius: 15px;
+  background-color: #f0f3fb;
+  flex: 2;
   padding: 20px;
-  overflow-y: auto; /* Enables vertical scrolling */
-  max-height: calc(100vh - 50px); /* Adjusts the height to prevent overflow from the viewport */
+  max-height: calc(100vh - 50px);
+  height: fit-content;
+  overflow-y: auto;
 }
 
-.patient-info {
+.heading-pre {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.patient-info-pre {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
-.patient-info p {
-  margin: 30px;
-  font-size: 25px;
+.patient-info-pre p {
+  margin: 0;
+  line-height: 1.6;
 }
 
-.form-group {
-  margin: 15px;
-  font-size: large;
+.input-field-pre {
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
 }
 
-.form-group label {
+.main-section-pre {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-pre {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+}
+
+.label-pre {
+  font-size: 16px;
+  margin-bottom: 10px;
   display: block;
-  margin-bottom: 5px;
 }
 
-.form-group textarea {
+.textarea-pre {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(0, 64, 255);
   border-radius: 4px;
+  margin-bottom: 10px;
+  resize: none;
 }
 
-.urgent-bed {
-  margin: 20px 0;
-}
-
-.urgent-bed label {
-  margin-right: 20px;
-}
-
-.tests-section {
-  margin-top: 20px;
-}
-
-.tests-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.tests-section ul li {
-  margin: 5px 0;
-}
-
-.view-test-btn,
-.request-test-btn,
-.print-report-btn {
+.view-test-btn-pre {
   background-color: #2f74c0;
   color: white;
   border: none;
-  border-style: solid;
   border-radius: 25px;
   padding: 10px 20px;
   cursor: pointer;
-  margin: 15px;
-  font-size: 20px;
+  font-size: 14px;
+  margin-top: 10px;
 }
-.tests-section {
+
+.bottom-section-pre {
   margin-top: 20px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+.urgent-bed-pre {
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-.dropdown-btn {
+.urgent-bed-pre label {
+  margin-right: 15px;
+}
+
+.final-report-card-pre {
+  margin: 25px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Adjust as needed */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.final-report-section-pre {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.print-report-btn-pre {
   background-color: #2f74c0;
   color: white;
   border: none;
-  border-radius: 24px;
+  border-radius: 25px;
   padding: 10px 20px;
-  font-size: 16px;
   cursor: pointer;
-  text-align: left;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.dropdown-content label {
+  font-size: 14px;
   display: block;
-  padding: 8px 0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.tests-section-pre {
+  margin: 25px;
+  margin-top: 50%;
+  border-radius: 15px;
+  background-color: #fff;
+  /* flex: 1; */
+  padding: 20px;
+  max-height: calc(100vh - 50px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+  height: fit-content;
+}
+
+.tests-heading-pre {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.tests-list-pre {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.test-item-pre {
+  padding: 5px 0;
+}
+
+.request-test-btn-pre {
+  background-color: #2f74c0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.section-pre{
+  display: flex;
+  flex-direction: column;
+}
+.pre-come{
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
 }

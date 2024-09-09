@@ -47,6 +47,8 @@
 }
 
 .records-table {
+  padding-right: 100px;
+  padding-left: 100px;
   margin-top: 40px;
 }
 
@@ -63,6 +65,14 @@
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ccc;
+}
+
+.records-table tbody tr.even-row {
+  background-color: rgba(171, 196, 255, 1);
+}
+
+.records-table tbody tr.odd-row {
+  background-color: rgba(215, 227, 252, 1);
 }
 
 .status-green {
@@ -102,4 +112,16 @@
     font-size: 12px;
     padding: 6px;
   }
+}
+.input-group-doc select {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  appearance: none;
+  box-sizing: border-box;
+  border-color: #007bff;
+  margin-bottom: 20px; /* Add some spacing */
 }
