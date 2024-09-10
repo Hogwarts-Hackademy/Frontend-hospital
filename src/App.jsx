@@ -16,6 +16,7 @@ import AddHospitalProfile from "./pages/addHospitalProfile/addHospitalProfile.js
 import HospitalProfile from "./pages/hospitalProfile/hospitalProfile.jsx";
 import DepartmentInfo from "./pages/departmentInfo/departmentInfo.jsx";
 import LabTechnicians from "./pages/dashboards/labTechnicians/technician.jsx"
+import BedAvail from "./pages/bedAvailibility/bedavailibility.jsx"
 
 import Component1 from "./pages/component/component.jsx"
 function App() {
@@ -39,6 +40,7 @@ function App() {
 				<Route path="/department-info" element={<DepartmentInfo/>}/>
 				<Route path="/component1" element={<Component1 />} />
 				<Route path="/technician" element={<LabTechnicians />} />
+				<Route path="/beds" element={<BedAvail />} />
 			</Routes>
 		</div>
 	);
