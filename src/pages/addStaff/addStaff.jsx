@@ -39,20 +39,42 @@ const AddStaff = () => {
 	};
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
-		try {
-			const response = await axios.post(`${staffAPI.ADD_STAFF}`, formData);
-			setSnackbarMessage('Staff registered successfully!');
-			setSnackbarSeverity('success');
-			setSnackbarOpen(true);
-			console.log('Staff registered:', response.data);
-		} catch (error) {
-			setSnackbarMessage('Error registering staff.');
-			setSnackbarSeverity('error');
-			setSnackbarOpen(true);
-			console.error('Error registering staff:', error.response ? error.response.data : error.message);
-		}
-	};
+        e.preventDefault();
+    
+        // Structure the form data to match the backend's schema
+        const structuredData = {
+            fullName: formData.fullName,
+            dateOfBirth: formData.dob,
+            gender: formData.gender,
+            contactInformation: {
+                phone: formData.contact,
+                address: formData.address,
+            },
+            nationalID: formData.nationalId,
+            professionalDetails: {
+                specialization: formData.specialization,
+                department: formData.department,
+                jobTitle: formData.staffType,
+                yearsOfExperience: formData.yearsOfExperience,
+                licenseNumber: formData.licenseNumber,
+            },
+            staffType: formData.staffType,
+        };
+    
+        try {
+            const response = await axios.post(`${staffAPI.ADD_STAFF}`, structuredData);
+            setSnackbarMessage('Staff registered successfully!');
+            setSnackbarSeverity('success');
+            setSnackbarOpen(true);
+            console.log('Staff registered:', response.data);
+        } catch (error) {
+            setSnackbarMessage('Error registering staff.');
+            setSnackbarSeverity('error');
+            setSnackbarOpen(true);
+            console.error('Error registering staff:', error.response ? error.response.data : error.message);
+        }
+    };
+    
 
 	const handleCloseSnackbar = () => {
 		setSnackbarOpen(false);
