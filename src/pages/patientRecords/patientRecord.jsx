@@ -59,7 +59,7 @@ const PatientRecords = () => {
                         </thead>
                         <tbody>
                         {patientRecords.map((patient) => (
-                                <tr key={patient.patientID}>
+                                <tr key={patient.patientID} className={patient % 2 === 0 ? 'even-row' : 'odd-row'}>
                                     <td>{patient.fullName}</td>
                                     <td>{new Date().getFullYear() - new Date(patient.dateOfBirth).getFullYear()}</td>
                                     <td>{patient.contactInformation.address}</td>
