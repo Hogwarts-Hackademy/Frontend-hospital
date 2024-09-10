@@ -58,7 +58,7 @@ const LoginPage = () => {
                 <h2>Welcome back!</h2>
                 <p>Enter your Credentials to access your account</p>
                 <form onSubmit={handleLogin}>
-                    <div className="input-group">
+                    <div className="input-group-login">
                         <label htmlFor="username">Username</label>
                         <input
                             type="text"
@@ -69,7 +69,7 @@ const LoginPage = () => {
                             aria-label="Username"
                         />
                     </div>
-                    <div className="input-group">
+                    <div className="input-group-login">
                         <div className="password-group">
                             <label htmlFor="password">Password</label>
                         </div>
