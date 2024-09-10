@@ -1,10 +1,10 @@
-.dashboard-container {
+.dashboard-container-depart {
   display: flex;
   width: 100%;
   height: 100vh;
 }
 
-.main-content1{
+.main-content1-depart {
   background-color: #ffffff;
   flex: 1;
   padding: 20px;
@@ -18,15 +18,14 @@
   border-radius: 15px;
 }
 
-.main-header {
+.main-header-depart {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-
 }
 
-.search-input {
+.search-input-depart {
   padding: 10px;
   width: 200px;
   border: 1px solid black;
@@ -37,14 +36,14 @@
   background-color: rgba(0, 0, 255, 0.152);
 }
 
-.department-cards-container {
+.department-cards-container-depart {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   grid-template-rows: repeat(3, 1fr);    /* 3 rows */
   gap: 20px;
 }
 
-.department-card {
+.department-card-depart {
   background-color: #dae3f1;
   height: 150px;
   padding: 10px;
@@ -54,50 +53,49 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.department-card:nth-child(3),.department-card:nth-child(4) {
+.department-card-depart:nth-child(3), .department-card-depart:nth-child(4) {
   background-color: #c2d2f0; /* Different background for even rows */
 }
 
-.department-card:hover {
+.department-card-depart:hover {
   transform: scale(1.05);
   background-color: #c2d2f0; /* Hover color */
 }
 
-.department-card h3 {
+.department-card-depart h3 {
   margin-bottom: 10px;
 }
 
-.card-content {
+.card-content-depart {
   font-size: 14px;
 }
 
-.card-content p {
+.card-content-depart p {
   margin: 5px 0;
 }
 
-.card-content span {
+.card-content-depart span {
   font-weight: bold;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .department-cards-container {
+  .department-cards-container-depart {
     grid-template-columns: 1fr; /* Stack the cards vertically on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .search-input {
+  .search-input-depart {
     width: 100%;
   }
 
-  .main-header label {
+  .main-header-depart label {
     font-size: 16px;
   }
 }
 
-#h {
-
+#h-depart {
   position: relative;
   left: 60px;
 }

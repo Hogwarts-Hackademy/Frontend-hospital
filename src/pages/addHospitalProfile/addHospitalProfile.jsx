@@ -78,13 +78,6 @@ const AddHospitalProfile = () => {
                           setContacts(updatedContacts);
                         }}
                       />
-                      <FaPlus className="add-icon" onClick={handleAddContact} />
-                      {index > 0 && (
-                        <FaTimes
-                          className="delete-icon"
-                          onClick={() => handleRemoveContact(index)}
-                        />
-                      )}
                     </div>
                   </div>
                 ))}
@@ -112,7 +105,7 @@ const AddHospitalProfile = () => {
 
             {step === 2 && (
               <>
-                <div className="card-container">
+                <div className="card-container-addhos">
                   {cards.map((card, index) => (
                     <div className="card-inner" key={index}>
                   
