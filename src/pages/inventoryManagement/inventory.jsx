@@ -13,8 +13,8 @@ const InventoryPage = () => {
     ];
 
     const pharmaceuticalsData = [
-        { drugName: "Paracetamol", classification: "Analgesic", formulation: "Tablet", strength: "500 mg", quantity: 1000, dateOfPurchase: "10/10/2022", batchNumber: "C789", manufacturer: "PharmaCorp", supplier: "MediSupplies", purchasePrice: 0.10, sellingPrice: 0.50, totalCost: 100, expiryDate: "10/10/2024", storage: "Cool, dry place", reorderLevel: 500 },
-        { drugName: "Amoxicillin", classification: "Antibiotic", formulation: "Capsule", strength: "250 mg", quantity: 500, dateOfPurchase: "05/15/2022", batchNumber: "D012", manufacturer: "HealthPharma", supplier: "PharmaDistributors", purchasePrice: 0.20, sellingPrice: 1.00, totalCost: 500, expiryDate: "05/15/2025", storage: "Refrigerated", reorderLevel: 200 }
+        { drugName: "Paracetamol", classification: "Analgesic", formulation: "Tablet", strength: "500 mg", quantity: 1000, dateOfPurchase: "10/10/2022", batchNumber: "C789", manufacturer: "PharmaCorp", supplier: "MediSupplies", purchasePrice: 0.10, sellingPrice: 0.50, totalCost: 100, expiryDate: "10/10/2024"},
+        { drugName: "Amoxicillin", classification: "Antibiotic", formulation: "Capsule", strength: "250 mg", quantity: 500, dateOfPurchase: "05/15/2022", batchNumber: "D012", manufacturer: "HealthPharma", supplier: "PharmaDistributors", purchasePrice: 0.20, sellingPrice: 1.00, totalCost: 500, expiryDate: "05/15/2025" }
     ];
 
     const toggleRow = (index) => {
@@ -76,8 +76,6 @@ const InventoryPage = () => {
                                         <th>Selling Price</th>
                                         <th>Total Cost</th>
                                         <th>Expiry Date</th>
-                                        <th>Storage Conditions</th>
-                                        <th>Reorder Level</th>
                                     </>
                                 )}
                             </tr>
