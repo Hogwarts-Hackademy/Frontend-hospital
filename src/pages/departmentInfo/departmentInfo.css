@@ -1,15 +1,21 @@
 .dashboard-container {
   display: flex;
-  flex-direction: row;
   width: 100%;
   height: 100vh;
 }
 
-.main-content {
+.main-content1{
+  background-color: #ffffff;
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
-  overflow-y: auto; /* Makes the content scrollable */
+  overflow-y: auto;
+  position: relative;
+  top: 30px;
+  right: 120px;
+  margin-top: 20px;
+  height: 80vh;
+  border-radius: 15px;
 }
 
 .main-header {
@@ -17,61 +23,81 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+
 }
 
 .search-input {
   padding: 10px;
   width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: 26px;
+  text-align: center;
+  position: relative;
+  right: 60%;
+  background-color: rgba(0, 0, 255, 0.152);
 }
 
 .department-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
   gap: 20px;
 }
 
 .department-card {
   background-color: #dae3f1;
-  padding: 15px;
+  height: 150px;
+  padding: 10px;
+  width: 350px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.department-card:nth-child(3),.department-card:nth-child(4) {
+  background-color: #c2d2f0; /* Different background for even rows */
+}
+
+.department-card:hover {
+  transform: scale(1.05);
+  background-color: #c2d2f0; /* Hover color */
+}
+
+.department-card h3 {
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 14px;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
+
+.card-content span {
+  font-weight: bold;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .dashboard-container {
-    flex-direction: column;
-  }
-
-  .main-content {
-    padding: 10px;
-  }
-
   .department-cards-container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-
-  .main-header h1 {
-    font-size: 24px;
+    grid-template-columns: 1fr; /* Stack the cards vertically on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .main-header h1 {
-    font-size: 20px;
-  }
-
-  .department-cards-container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-
   .search-input {
     width: 100%;
   }
 
-  .sidebar {
-    width: 100%;
+  .main-header label {
+    font-size: 16px;
   }
+}
+
+#h {
+
+  position: relative;
+  left: 60px;
 }
