@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { FaPlus, FaTimes } from "react-icons/fa";
 import "./addHospitalProfile.css";
@@ -108,7 +109,7 @@ const AddHospitalProfile = () => {
                 <div className="card-container-addhos">
                   {cards.map((card, index) => (
                     <div className="card-inner" key={index}>
-                  
+
                       <div className="input-group">
                         <label>Department {index + 1}</label>
                         <select>
@@ -135,7 +136,7 @@ const AddHospitalProfile = () => {
                           (_, i) => (
                             <div className="input-group" key={i}>
                               <label>Ward {i + 1} Bed</label>
-                              <input type="text"/>
+                              <input type="text" />
                             </div>
                           )
                         )}
