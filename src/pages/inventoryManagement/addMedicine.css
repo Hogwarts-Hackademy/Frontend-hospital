@@ -1,0 +1,50 @@
+.add-medicine-container {
+  display: flex;
+}
+
+.add-medicine-card {
+  margin-left: 250px; /* Adjust according to your sidebar width */
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjust according to your sidebar width */
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.medicine-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.medicine-form input[type="number"] {
+  -moz-appearance: textfield; /* Remove spinner in Firefox */
+}
+
+.medicine-form input[type="date"] {
+  padding: 0;
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}

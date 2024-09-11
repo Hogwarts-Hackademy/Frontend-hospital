@@ -18,6 +18,7 @@ import DepartmentInfo from "./pages/departmentInfo/departmentInfo.jsx";
 import LabTechnicians from "./pages/dashboards/labTechnicians/technician.jsx"
 import BedAvail from "./pages/bedAvailibility/bedavailibility.jsx"
 import InventoryPage from "./pages/inventoryManagement/inventory.jsx";
+import AddMedicine from "./pages/inventoryManagement/addInventory.jsx";
 
 function App() {
 	return (
@@ -36,11 +37,12 @@ function App() {
 				<Route path="/doctos-status" element={<DoctosStatus />} />
 				<Route path="/billing" element={<BillingPage />} />
 				<Route path="/add-hospital" element={<AddHospitalProfile />} />
-				<Route path="/hospital-profile" element={<HospitalProfile/>} />
-				<Route path="/department-info" element={<DepartmentInfo/>}/>
+				<Route path="/hospital-profile" element={<HospitalProfile />} />
+				<Route path="/department-info" element={<DepartmentInfo />} />
 				<Route path="/technician" element={<LabTechnicians />} />
 				<Route path="/beds" element={<BedAvail />} />
 				<Route path="/inventory" element={<InventoryPage />} />
+				<Route path="/add-medicine" element={<AddMedicine />} />
 			</Routes>
 		</div>
 	);
