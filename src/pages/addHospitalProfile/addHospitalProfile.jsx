@@ -60,6 +60,10 @@ const AddHospitalProfile = () => {
 										/>
 									</div>
 								</div>
+								<div className="input-group-hrs">
+									<label>Email</label>
+									<input type="url" />
+								</div>
 
 								<div className="input-group-date">
 									<label>Established Date</label>
@@ -75,10 +79,6 @@ const AddHospitalProfile = () => {
 										type="text"
 										placeholder="Enter affiliation details"
 									/>
-								</div>
-								<div className="input-group-hrs">
-									<label>Email</label>
-									<input type="url" />
 								</div>
 
 								<button onClick={handleNext}>Next</button>
@@ -98,14 +98,36 @@ const AddHospitalProfile = () => {
 													<option value="">
 														Select Department
 													</option>
-													<option value="surgery">
-														Surgery
-													</option>
-													<option value="cardiology">
+													<option value="Cardiology">
 														Cardiology
 													</option>
-													<option value="neurology">
+													<option value="Neurology">
 														Neurology
+													</option>
+													<option value="Pediatrics">
+														Pediatrics
+													</option>
+													<option value="Orthopedics">
+														Orthopedics
+													</option>
+													<option value="Obstetrics and Gynecology">
+														Obstetrics and
+														Gynecology
+													</option>
+													<option value="Gastroenterology">
+														Gastroenterology
+													</option>
+													<option value="Pulmonology">
+														Pulmonology
+													</option>
+													<option value="Radiology">
+														Radiology
+													</option>
+													<option value="Ophthalmology">
+														Ophthalmology
+													</option>
+													<option value="Dermatology">
+														Dermatology
 													</option>
 												</select>
 											</div>
@@ -138,7 +160,10 @@ const AddHospitalProfile = () => {
 														<label>
 															Ward {i + 1} Bed
 														</label>
-														<input type="text" />
+														<input
+															type="number"
+															min={1}
+														/>
 													</div>
 												))}
 											</div>
