@@ -4,7 +4,7 @@ import Sidebar from "../../Components/Sidebar";
 
 const BillingPage = () => {
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container-bill">
       <Sidebar />
       <div className="main-content">
         <div className="billing-header">
