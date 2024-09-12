@@ -31,10 +31,9 @@
 }
   
 .search-bar-app-lab {
-    border-radius: 10px;
-    border-color: #ffffff;
     padding: 10px;
-    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     margin-right: 10px;
 }
   
