@@ -1,50 +1,91 @@
 .add-medicine-container {
   display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f3fb;
 }
 
 .add-medicine-card {
-  margin-left: 250px; /* Adjust according to your sidebar width */
-  padding: 20px;
-  width: calc(100% - 250px); /* Adjust according to your sidebar width */
+  width: 1400px;
+  height: fit-content;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
 }
 
 .form-title {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .medicine-form {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
-.medicine-form input {
-  margin-bottom: 15px;
-  padding: 10px;
+.input-group-first {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.full-width-input {
+  width: 100%;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
-}
-
-.medicine-form input[type="number"] {
-  -moz-appearance: textfield; /* Remove spinner in Firefox */
-}
-
-.medicine-form input[type="date"] {
-  padding: 0;
 }
 
 .submit-btn {
-  padding: 10px 15px;
+  width: 30%;
   background-color: #007bff;
   color: white;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 20px;
+  align-self: center;
 }
 
 .submit-btn:hover {
   background-color: #0056b3;
+}
+
+.add-medicine-container input[type="text"], input[type="date"], input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(0, 64, 255);
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin: 5px;
+}
+.add-medicine-selector{
+  padding: 8px;
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 20px;
+  height: max-content;
+}
+.add-medicine-form input{
+  display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.add-medicine-div{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }

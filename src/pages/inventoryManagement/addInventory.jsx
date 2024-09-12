@@ -1,55 +1,84 @@
-import React, { useState } from 'react';
-import Sidebar from '../../Components/Sidebar';
-import './addMedicine.css';
+import React, { useState } from "react";
+import axios from "axios";
+import "./addMedicine.css";
+import Sidebar from "../../Components/Sidebar";
 
-const AddMedicine = () => {
+const AddMedicinePage = () => {
+    const [selectedCategory, setSelectedCategory] = useState("medicalSupplies");
     const [formData, setFormData] = useState({
-        drugName: '',
-        drugClassification: '',
-        formulation: '',
-        strength: '',
-        quantityAvailable: '',
-        dateOfPurchase: '',
-        batchNumber: '',
-        manufacturer: '',
-        supplierDetails: '',
-        purchasePrice: '',
-        sellingPrice: '',
-        totalCost: '',
-        expiryDate: '',
-        storageConditions: '',
-        reorderLevel: ''
+        itemName: "",
+        category: "",
+        quantityAvailable: "",
+        dateOfPurchase: "",
+        batchNumber: "",
+        supplierDetails: "",
+        pricePerUnit: "",
+        totalCost: "",
+        expiryDate: "",
+        storageConditions: "",
+        reorderLevel: "",
+        drugName: "",
+        drugClassification: "",
+        formulation: "",
+        strength: "",
+        manufacturer: "",
+        purchasePrice: "",
+        sellingPrice: ""
     });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
-            const response = await fetch('http://localhost:5000/api/inventory/pharmaceuticals/add', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-
-            const result = await response.json();
-            if (response.ok) {
-                alert('Medicine added to inventory successfully');
+            if (selectedCategory === "medicalSupplies") {
+                await axios.post(
+                    "http://localhost:5000/api/inventory/consumables/add",
+                    {
+                        itemName: formData.itemName,
+                        category: formData.category,
+                        quantityAvailable: formData.quantityAvailable,
+                        dateOfPurchase: formData.dateOfPurchase,
+                        batchNumber: formData.batchNumber,
+                        supplierDetails: formData.supplierDetails,
+                        pricePerUnit: formData.pricePerUnit,
+                        totalCost: formData.totalCost,
+                        expiryDate: formData.expiryDate,
+                        storageConditions: formData.storageConditions,
+                        reorderLevel: formData.reorderLevel,
+                    }
+                );
             } else {
-                alert('Failed to add medicine: ' + result.message);
+                await axios.post(
+                    "http://localhost:5000/api/inventory/pharmaceuticals/add",
+                    {
+                        drugName: formData.drugName,
+                        drugClassification: formData.drugClassification,
+                        formulation: formData.formulation,
+                        strength: formData.strength,
+                        quantityAvailable: formData.quantityAvailable,
+                        dateOfPurchase: formData.dateOfPurchase,
+                        batchNumber: formData.batchNumber,
+                        manufacturer: formData.manufacturer,
+                        supplierDetails: formData.supplierDetails,
+                        purchasePrice: formData.purchasePrice,
+                        sellingPrice: formData.sellingPrice,
+                        totalCost: formData.totalCost,
+                        expiryDate: formData.expiryDate,
+                        reorderLevel: formData.reorderLevel,
+                        storageConditions: formData.storageConditions,
+                    }
+                );
             }
-        } catch (error) {
-            console.error('Error adding medicine:', error);
-            alert('An error occurred while adding the medicine');
+            alert("Data added successfully");
+        } catch (err) {
+            alert("Error adding data: " + err.message);
         }
     };
 
@@ -57,29 +86,208 @@ const AddMedicine = () => {
         <div className="add-medicine-container">
             <Sidebar />
             <div className="add-medicine-card">
-                <h2 className="form-title">Add Medicine to Inventory</h2>
-                <form className="medicine-form" onSubmit={handleSubmit}>
-                    <input type="text" name="drugName" placeholder="Drug Name" onChange={handleInputChange} />
-                    <input type="text" name="drugClassification" placeholder="Drug Classification" onChange={handleInputChange} />
-                    <input type="text" name="formulation" placeholder="Formulation" onChange={handleInputChange} />
-                    <input type="text" name="strength" placeholder="Strength" onChange={handleInputChange} />
-                    <input type="number" name="quantityAvailable" placeholder="Quantity Available" onChange={handleInputChange} />
-                    <input type="date" name="dateOfPurchase" placeholder="Date of Purchase" onChange={handleInputChange} />
-                    <input type="text" name="batchNumber" placeholder="Batch Number" onChange={handleInputChange} />
-                    <input type="text" name="manufacturer" placeholder="Manufacturer" onChange={handleInputChange} />
-                    <input type="text" name="supplierDetails" placeholder="Supplier Details" onChange={handleInputChange} />
-                    <input type="number" name="purchasePrice" placeholder="Purchase Price" onChange={handleInputChange} />
-                    <input type="number" name="sellingPrice" placeholder="Selling Price" onChange={handleInputChange} />
-                    <input type="number" name="totalCost" placeholder="Total Cost" onChange={handleInputChange} />
-                    <input type="date" name="expiryDate" placeholder="Expiry Date" onChange={handleInputChange} />
-                    <input type="text" name="storageConditions" placeholder="Storage Conditions" onChange={handleInputChange} />
-                    <input type="number" name="reorderLevel" placeholder="Reorder Level" onChange={handleInputChange} />
+                <div className="add-medicine-div">
+            <h2>Add Inventory</h2>
+            <select
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="add-medicine-selector"
+            >
+                <option value="medicalSupplies">Medical Supplies (Consumables)</option>
+                <option value="pharmaceuticals">Pharmaceuticals (Medicines)</option>
+            </select>
+            </div>
 
-                    <button type="submit" className="submit-btn">Add Medicine</button>
-                </form>
+            <form onSubmit={handleSubmit} className="add-medicine-form">
+                {selectedCategory === "medicalSupplies" ? (
+                    <>
+                        <input
+                            type="text"
+                            name="itemName"
+                            placeholder="Item Name"
+                            value={formData.itemName}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="category"
+                            placeholder="Category"
+                            value={formData.category}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="quantityAvailable"
+                            placeholder="Quantity Available"
+                            value={formData.quantityAvailable}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="date"
+                            name="dateOfPurchase"
+                            placeholder="Date of Purchase"
+                            value={formData.dateOfPurchase}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="batchNumber"
+                            placeholder="Batch Number"
+                            value={formData.batchNumber}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="supplierDetails"
+                            placeholder="Supplier Details"
+                            value={formData.supplierDetails}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="pricePerUnit"
+                            placeholder="Price per Unit"
+                            value={formData.pricePerUnit}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="totalCost"
+                            placeholder="Total Cost"
+                            value={formData.totalCost}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="date"
+                            name="expiryDate"
+                            placeholder="Expiry Date"
+                            value={formData.expiryDate}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="storageConditions"
+                            placeholder="Storage Conditions"
+                            value={formData.storageConditions}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="reorderLevel"
+                            placeholder="Reorder Level"
+                            value={formData.reorderLevel}
+                            onChange={handleInputChange}
+                        />
+                    </>
+                ) : (
+                    <>
+                        <input
+                            type="text"
+                            name="drugName"
+                            placeholder="Drug Name"
+                            value={formData.drugName}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="drugClassification"
+                            placeholder="Drug Classification"
+                            value={formData.drugClassification}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="formulation"
+                            placeholder="Formulation"
+                            value={formData.formulation}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="strength"
+                            placeholder="Strength"
+                            value={formData.strength}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="quantityAvailable"
+                            placeholder="Quantity Available"
+                            value={formData.quantityAvailable}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="date"
+                            name="dateOfPurchase"
+                            placeholder="Date of Purchase"
+                            value={formData.dateOfPurchase}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="batchNumber"
+                            placeholder="Batch Number"
+                            value={formData.batchNumber}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="manufacturer"
+                            placeholder="Manufacturer"
+                            value={formData.manufacturer}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="supplierDetails"
+                            placeholder="Supplier Details"
+                            value={formData.supplierDetails}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="purchasePrice"
+                            placeholder="Purchase Price"
+                            value={formData.purchasePrice}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="sellingPrice"
+                            placeholder="Selling Price"
+                            value={formData.sellingPrice}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="totalCost"
+                            placeholder="Total Cost"
+                            value={formData.totalCost}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="date"
+                            name="expiryDate"
+                            placeholder="Expiry Date"
+                            value={formData.expiryDate}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            type="number"
+                            name="reorderLevel"
+                            placeholder="Reorder Level"
+                            value={formData.reorderLevel}
+                            onChange={handleInputChange}
+                        />
+                    </>
+                )}
+                <button type="submit" className="submit-btn">
+                    Add
+                </button>
+                
+            </form>
             </div>
         </div>
     );
 };
 
-export default AddMedicine;
+export default AddMedicinePage;
