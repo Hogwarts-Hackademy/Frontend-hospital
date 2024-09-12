@@ -26,9 +26,9 @@
   cursor: pointer;
 }
 
-.search-bar input {
+.search-bar-que input {
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 1px solid #ccc;
 }
 

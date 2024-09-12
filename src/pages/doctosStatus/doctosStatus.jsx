@@ -34,7 +34,7 @@ const DoctosStatus = () => {
             <div className="main-content">
                 <div className="main-header">
                     <h1>Doctors Status</h1>
-                    <div className="search-bar">
+                    <div className="search-bar-doc">
                         <input type="text" placeholder="Search" />
                     </div>
                 </div>

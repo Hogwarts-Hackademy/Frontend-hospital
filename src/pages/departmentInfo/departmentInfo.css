@@ -28,12 +28,10 @@
 .search-input-depart {
   padding: 10px;
   width: 200px;
-  border: 1px solid black;
-  border-radius: 26px;
-  text-align: center;
-  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   right: 60%;
-  background-color: rgba(0, 0, 255, 0.152);
 }
 
 .department-cards-container-depart {
