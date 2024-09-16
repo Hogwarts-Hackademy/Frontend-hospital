@@ -10,7 +10,7 @@ const QueueList = () => {
                 <div className="header">
                     <button className="department-select">Select Department</button>
                     <h2>O P D</h2>
-                    <div className="search-bar">
+                    <div className="search-bar-que">
                         <input type="text" placeholder="Search" />
                     </div>
                 </div>

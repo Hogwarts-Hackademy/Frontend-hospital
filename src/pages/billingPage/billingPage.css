@@ -1,5 +1,5 @@
 /* Main layout */
-.dashboard-container {
+.dashboard-container-bill {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -7,7 +7,7 @@
     padding: 20px;
     font-family: 'Arial', sans-serif; /* Adjust font family */
 }
-
+ 
 .main-content {
     flex: 1;
     padding: 20px;

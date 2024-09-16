@@ -1,5 +1,7 @@
+import BaseURL from "./baseURL";
+
 const staffAPI = {
-    ADD_STAFF: "http://localhost:5000/api/staff/add-staff"
+	ADD_STAFF_URL: `${BaseURL.LOCAL_BASE_URL}/staff/add`,
 };
 
 export default staffAPI;
