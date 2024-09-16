@@ -1,0 +1,79 @@
+/* inventory-inv.css */
+
+.dashboard-container-inv {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main-content-inv {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+    margin: 25px;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.main-header-inv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.inventory-title-inv {
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+    letter-spacing: 0.3rem;
+}
+
+.search-bar-inv {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.inventory-selector-inv {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.records-table-inv {
+    overflow-x: auto;
+}
+
+.records-table-inv table td, .records-table-inv table th {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+.records-table-inv table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.records-table-inv table th {
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.records-table-inv table tr.even-row-inv {
+    background-color: rgba(171, 196, 255, 1);
+}
+
+.records-table-inv table tr.odd-row-inv {
+    background-color: rgba(215, 227, 252, 1);
+}
+
+.expanded-inv {
+    background-color: #f0f0f0;
+}

@@ -38,12 +38,13 @@
   align-items: center;
 }
 
-.search-bar input {
-  border-radius: 10px;
-  border-color: #ffffff;
+.search-bar-add input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   padding: 10px;
   font-size: 16px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .notification-icon {

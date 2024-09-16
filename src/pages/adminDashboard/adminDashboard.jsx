@@ -84,7 +84,7 @@ const Dashboard = () => {
               <span className="user-name">User Name</span>
             </h1>
             <div className="header-right">
-              <div className="search-bar">
+              <div className="search-bar-add">
                 <input type="text" placeholder="Search" />
               </div>
               <NotificationsNoneIcon className="notification-icon" />

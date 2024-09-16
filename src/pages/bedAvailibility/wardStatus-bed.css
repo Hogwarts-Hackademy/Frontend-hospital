@@ -1,0 +1,178 @@
+.dashboard-container-bed {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  .contact-support-bed {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .contact-support-bed p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-support-bed button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .main-content-bed {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+  }
+  
+  .main-header-bed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-header-bed h1 {
+    margin: 0;
+  }
+  
+  .search-bar-bed input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .main-big-card-bed {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 40px;
+  }
+  
+  .main-big-card-bed h2 {
+    margin-bottom: 20px;
+    width: 15%;
+  }
+  
+  .ward-cards-bed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .ward-card-bed {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+  }
+  
+  .ward-card-bed h3 {
+    margin: 0 0 10px;
+  }
+  
+  .ward-card-bed p {
+    margin: 5px 0;
+  }
+  
+  .even-card-bed {
+    background-color: rgba(171, 196, 255, 1);
+  }
+  
+  .odd-card-bed {
+    background-color: rgba(215, 227, 252, 1);
+  }
+  
+  .status-green-bed {
+    color: green;
+  }
+  
+  .status-red-bed {
+    color: red;
+  }
+  .ward-cards-bed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 components in a row */
+    gap: 20px;
+}
+
+.ward-card-bed {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+}
+.input-group-doc-bed{
+  width: 70%;
+}
+.even-row-bed {
+    background-color: rgba(171, 196, 255, 1); /* Same color for all 3 cards in the row */
+}
+
+.odd-row-bed {
+    background-color: rgba(215, 227, 252, 1); /* Different color for the next row */
+}
+
+.status-green-bed {
+    color: green;
+}
+
+.status-red-bed {
+    color: red;
+}
+.align-head-bed{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ward-cards-bed {
+        grid-template-columns: repeat(1, 1fr); /* 1 component per row on small screens */
+    }
+}
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboard-container-bed {
+      flex-direction: column;
+    }
+  
+    .main-content-bed {
+      padding: 10px;
+    }
+  
+    .ward-card-bed {
+      width: 100%;
+    }
+  }
+  
+  .input-group-doc-bed select {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    appearance: none;
+    box-sizing: border-box;
+    border-color: #007bff;
+    margin-bottom: 20px; /* Add some spacing */
+  }
+  
